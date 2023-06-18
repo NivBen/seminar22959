@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" value="notranslate">
+  <!--<script src="../../../lib/blockly_compressed.js"></script>
+    <script src="../../../lib/blocks_compressed.js"></script>
+    <!-- Messages for the user's language -->
+  <!-- <script src="../../../lib/msg/js/en.js"></script>
+    <script src="../../../lib/appengine/storage.js"></script> -->
+
+  <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+  <script src="https://unpkg.com/blockly/msg/en.js"></script>
+  <title>Seminar 22931</title>
+</head>
+
+<body>
+  <h1>Seminar 22931 Block Language </h1>
+  <p>
+    <button onclick="xmlText()" style="width: 50%;">Pretty print XML DOM</button>
+    <button type="button" onclick="copy_data(textarea)" style="width: 38%;">Copy XML DOM</button>
+  </p>
+  <div style="width: 100%">
+    <div id="blockDiv" style="display: inline-block; height: 600px; width: 50%;"></div>
+    <textarea id="textarea" disabled="disabled" style="display: inline-block; height: 600px; width: 38%;"></textarea>
+  </div>
+</body>
+
+<!--TOOLBOX-->
+<?xml version="1.0" encoding="UTF-8"?>
+<xml id="toolbox" style="display: none">
+  <category name="Thing" colour="000">
+    <label text="Id { (declare | event | when )* }"></label>
+    <block type="Thing/thing2"> </block>
+    <block type="Thing/thing1"> </block>
+  </category>
+
+  <category name="Thing_parameters" colour="010">
+    <label text="{declare}*"></label>
+    <block type="Thing_parameters/declare"> </block>
+    <label text="{when}*"></label>
+    <block type="Thing_parameters/when"> </block>
+    <label text="{event}*"></label>
+    <block type="Thing_parameters/event"> </block>
+  </category>
+
+  <category name="Declare" colour="020">
+    <label text="[&#34;[]&#34;] [Id_alias &#34;:&#34;] {id_item&#34;.&#34;}+ [&#34;=&#34; string_initial] [string_import]"></label>
+    <block type="Declare/declare1"> </block>
+    <block type="Declare/declare2"> </block>
+    <block type="Declare/declare3"> </block>
+    <block type="Declare/declare4"> </block>
+    <block type="Declare/declare5"> </block>
+    <block type="Declare/declare6"> </block>
+    <block type="Declare/declare7"> </block>
+    <block type="Declare/declare8"> </block>
+  </category>
+  
+  <category name="Event" colour="030">
+  <label text="[Id_event] Id {params}"></label>
+    <block type="Event/event1"> </block>
+    <block type="Event/event2"> </block>
+  </category>
+
+  <category name="When" colour="040">
+  <label text="[Id_when] {[ &#34;[&#34; {declare} &#34;]&#34; ]&#34;.&#34;}+ Id_signal {params} &#34;{&#34; {action}* &#34;}&#34;"></label>
+    <block type="When/when1"> </block>
+  </category>
+
+  <category name="Action" colour="050">
+    <label text="[&#34;*&#34;] {Expr} [&#34;?&#34;] &#34;{&#34; {action_true}* &#34;}&#34;"></label>
+    <block type="Action/action"> </block>
+  </category>
+
+  <category name="Params" colour="060">
+    <label text="&#34;(&#34; {declare &#34;,&#34;}* [...variadic] &#34;)&#34;"></label>
+    <block type="Params/params1"> </block>
+    <block type="Params/params2"> </block>
+    <block type="Params/params3"> </block>
+    <block type="Params/params4"> </block>
+  </category>
+
+  <category name="Ref" colour="070">
+    <label text="Id [&#34;[&#34; (<expr | &#34;*&#34;>) &#34;]&#34;]"></label>
+    <block type="Ref/ref1"> </block>
+    <block type="Ref/ref2"> </block>
+    <block type="Ref/ref3"> </block>
+  </category>
+
+  <category name="Expr" colour="080">
+    <label text="ExprType"></label>
+    <block type="Expr/exp1"> </block>
+  </category>
+
+  <category name="ExprType" colour="090">
+    <label text="(String | Number | <ref>)"></label>
+    <block type="ExprType/Number"> </block>
+    <block type="ExprType/string"> </block>
+    <block type="text_print" id="P2oK7V|#ZgNH+SQyY397" x="63" y="123">
+      <value name="TEXT">
+        <shadow type="text" id="qyR!YSepDIO47-}uZ`{t">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="ExprType/ref"> </block>
+  </category>
+
+  <!--<category name="Id" colour="100">
+    <block type="Id"> </block>
+  </category>-->
+
+  <category name="id_item" colour="110">
+    <label text="{ id_item &#34;.&#34; }* "></label>
+    <block type="Dot_Id/dot_id"> </block>
+  </category>
+  
+  <!--<category name="Integer" colour="120">
+    <block type="Integer/inte"> </block>
+  </category>-->
+
+  <category name="String" colour="130">
+    <block type="String/s"> </block>
+  </category>
+
+  <category name="print_text" colour="255">
+  <block type="text_print" id="P2oK7V|#ZgNH+SQyY397" x="63" y="123">
+    <value name="TEXT">
+      <shadow type="text" id="qyR!YSepDIO47-}uZ`{t">
+        <field name="TEXT">Example Text 1</field>
+      </shadow>
+    </value>
+    <next>
+      <shadow type="text_print" id="5)bb]1]IJ4IAu7g0kEf^">
+        <value name="TEXT">
+          <shadow type="text" id="1_(A5y^F$^~ECRFM~tNb">
+            <field name="TEXT">Example Text 2</field>
+          </shadow>
+        </value>
+      </shadow>
+    </next>
+  </block>
+  </category>
+
+</xml>
+
+<script src="blocks - edited.js"></script>
+
+</html>
