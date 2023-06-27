@@ -23,13 +23,16 @@ extend lang::std::Id;
 
   // [id] { Id [ "[" <declare> "]" ] "."}^+ Id <Params> "{" <action>* "}"
   syntax When
-  = when1: Id id_when When_sub_formula* Id id_signal Params "{" Action* "}"
-  | when2: When_sub_formula* Id id_signal Params "{" Action* "}"
+  = when1: Id id_when Id id_source When_sub_formula* Id id_signal Params "{" Action* "}"
+  | when2: Id id_when Id id_source "[" Declare "]" When_sub_formula* Id id_signal Params "{" Action* "}"
+  | when3: Id id_source When_sub_formula* Id id_signal Params "{" Action* "}"
+  | when4: Id id_source "[" Declare "]" When_sub_formula* Id id_signal Params "{" Action* "}"
   ;
 
+  // { Id [ "[" <declare> "]" ] "."}
   syntax When_sub_formula
-  = When_sub_formula1: Id id_source "." 
-  | When_sub_formula2: Id id_source "[" Declare "]."
+  = When_sub_formula1: "." Id id_source 
+  | When_sub_formula2: "." Id id_source "[" Declare "]"
   ;
 
   // [id] Id <params> "->" <params> [ "{" <action>* "}" ]
@@ -91,40 +94,45 @@ extend lang::std::Id;
   | ref3: Id "[*]"
   ;
 
-  // ["[]"] [Id_alias ":"] {id_item}*"." ["=" string_initial] [string_import]
+  // ["[]"] [Id_alias ":"] {id_item}^+"." ["=" string_initial] [string_import]
   syntax Declare
-  = declare1: "[]" Id ":" Dot_Id* "=" String initial String import
-  | declare2: "[]" Id ":" Dot_Id* "=" String initial 
-  | declare3: "[]" Id ":" Dot_Id* String import 
-  | declare4: "[]" Id ":" Dot_Id*
-  | declare5: "[]" Dot_Id* "=" String initial String import
-  | declare6: "[]" Dot_Id* "=" String initial
-  | declare7: "[]" Dot_Id* String import
-  | declare8: "[]" Dot_Id*
-  | declare9:  Id ":" Dot_Id* "=" String initial String import
-  | declare10: Id ":" Dot_Id* "=" String initial 
-  | declare11: Id ":" Dot_Id* String import 
-  | declare12: Id ":" Dot_Id*
-  | declare13: Dot_Id* "=" String initial String import
-  | declare14: Dot_Id* "=" String initial
-  | declare15: Dot_Id* String import
-  | declare16: Dot_Id*
+  = declare1: "[]" Id ":" Id id_item Declare_sub_formula* "=" String initial String import
+  | declare2: "[]" Id ":" Id id_item Declare_sub_formula* "=" String initial 
+  | declare3: "[]" Id ":" Id id_item Declare_sub_formula* String import 
+  | declare4: "[]" Id ":" Id id_item Declare_sub_formula*
+  | declare5: "[]" Id id_item Declare_sub_formula* "=" String initial String import
+  | declare6: "[]" Id id_item Declare_sub_formula* "=" String initial
+  | declare7: "[]" Id id_item Declare_sub_formula* String import
+  | declare8: "[]" Id id_item Declare_sub_formula*
+  | declare9:  Id ":" Id id_item Declare_sub_formula* "=" String initial String import
+  | declare10: Id ":" Id id_item Declare_sub_formula* "=" String initial 
+  | declare11: Id ":" Id id_item Declare_sub_formula* String import 
+  | declare12: Id ":" Id id_item Declare_sub_formula*
+  | declare13: Id id_item Declare_sub_formula* "=" String initial String import
+  | declare14: Id id_item Declare_sub_formula* "=" String initial
+  | declare15: Id id_item Declare_sub_formula* String import
+  | declare16: Id id_item Declare_sub_formula*
+  ;
+
+  //{id_item}^+"."
+  syntax Declare_sub_formula
+  = dot_id: "." Id id_item
   ;
 
   // "(" <declare>*"," ["..."] ")"
   syntax Params
   = params1: "(...)"
   | params2: "()"
-  | params3: "(" Declare* decalre "...)"
-  | params4: "(" Declare* decalre ")"
+  | params3: "(" Params_sub_formula* "...)"
+  | params4: "(" Params_sub_formula* ")"
   ;
 
-  syntax Dot_Id
-  = dot_id: "." Id
+  //<declare>*","
+  syntax Params_sub_formula
+  = declare_comma: Declare ","
   ;
 
   lexical Integer = natural: [0-9]+;
   lexical String =  s: [a-zA-Z]*;
 
-keyword Keywords = "true" | "false" ;
 
