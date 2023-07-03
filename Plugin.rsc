@@ -6,7 +6,7 @@ import kogi::simplification::Main;
 import kogi::seminar::Syntax;
 
 void createBBE() {
-  createBlocklyApp(#Thing, targetPath = |project://kogi/src/kogi/seminar/originalKogi|, blockly = "../../../lib");
+  createBlocklyApp(#Thing, targetPath = |project://kogi/src/kogi/seminar/generated-kogi-files|, blockly = "../../../lib");
 }
 
 void createSimplifiedBBE() {

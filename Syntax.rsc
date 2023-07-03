@@ -40,7 +40,7 @@ extend lang::std::Id;
   = func1: Id id_source Params "-\>" Params
   | func2: Id id_source Params "-\>" Params "{" Action* "}"
   | func3: Id id_function Id id_source Params "-\>" Params
-  | func3: Id id_function Id id_source Params "-\>" Params "{" Action* "}"
+  | func4: Id id_function Id id_source Params "-\>" Params "{" Action* "}"
   ;
 
   // ["*"] <expr> ["?"] "{" <action>* "}" [ "{" <action>* "}" ]
