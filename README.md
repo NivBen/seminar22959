@@ -16,7 +16,8 @@ ___Step 2___: after generating Blockly BBE, we manually updated the generated fi
 
 ### *Main changes*
 - Created Syntax.rsc Based on *BNF.png*
-- Added 'Generate XML DOM' functionality and displaying it in a modal
+- Added exporting XML text functionality and displaying it in a modal
+- Enabled importing XML text from a modal and converting it to blocks in the toolbox
 - Added Blockly GRID layout
 - Added Blockly zoom and focus buttons
 - Reorganized and re-colored block categories for better readability

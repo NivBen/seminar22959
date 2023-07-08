@@ -2150,6 +2150,7 @@ Blockly.Blocks['Thing/thing1'] = {
 			  "helpUrl" : ""
 			}
 		);
+		this.setCommentText('Initial Thing Block');
 	}
 }
 
@@ -3132,8 +3133,8 @@ langGen['Func/func1'] = function (block) {
 }
 
 langGen['Thing/thing1'] = function(block) {
-	function getBlockValues(a) {
-			const returnBlock = a.getDescendants(true);
+	function getBlockValues(block_temp) {
+			const returnBlock = block_temp.getDescendants(true);
 				if (returnBlock.length > 0) {
 					var counter = 0;
 					var returnString = '';
@@ -3259,13 +3260,24 @@ editor.getModel().onDidChangeContent(debouncedT2BUpdate);
 
 
 
-function xmlText() {
+function toXml() {
 	var xml = Blockly.Xml.workspaceToDom(workspace);
 	var xml_text = Blockly.Xml.domToPrettyText(xml);
 	const para = document.getElementById("XML_paragraph");
 	para.textContent = xml_text;
 	console.log(xml_text);
 }
+
+function fromXml() {
+	var input = document.getElementById('XML_paragraph');
+	try {
+		var xml = Blockly.Xml.textToDom(input.textContent);
+	} catch {
+		alert('invalid XML text for import');
+	}
+	workspace.clear(); // clear workspace before importing 
+	Blockly.Xml.domToWorkspace(xml, workspace);
+  }
 
 function copy_data(containerid) {
 	var range = document.createRange();

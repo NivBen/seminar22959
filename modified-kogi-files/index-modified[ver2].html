@@ -60,8 +60,9 @@
 <body>
   <h1>Seminar 22959 Block Language</h1>
   <div id="error_bar" class="bar error"></div>
-  <button onclick="xmlText()" style="width: 25%;">Generate XML DOM</button>
-  <button id="modal_btn" style="width: 25%;">Display latest generated XML DOM</button>
+  <button onclick="toXml()" style="width: 12%;">Generate XML</button>
+  <button id="modal_btn" style="width: 25%;">Display latest generated XML</button>
+  <button onclick="fromXml()" style="width: 12%;">import from XML</button>
   <button type="button" onclick="copy_data(monaco_container)" style="width: 49%;">Copy execution pane text</button>
   <div style="width: 100%">
     <div id="blockDiv" style="height: 600px; width: 49%; position: absolute; left: 8px;"></div>
@@ -82,7 +83,7 @@
   <div id="XMLModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <code id="XML_paragraph" style="white-space: pre-wrap"></code>
+      <code contenteditable="true" id="XML_paragraph" style="white-space: pre-wrap"></code>
     </div>
   </div>
 
