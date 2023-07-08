@@ -55,7 +55,7 @@ Blockly.Blocks['Declare/declare7'] = {
 				  	{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -143,7 +143,7 @@ Blockly.Blocks['Declare/declare9'] = {
 				{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Declare"
+				  "text" : "Id_alias"
 				},
 				  	{
 				  "name" : "",
@@ -152,7 +152,7 @@ Blockly.Blocks['Declare/declare9'] = {
 				  	{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -227,7 +227,7 @@ Blockly.Blocks['Declare/declare12'] = {
 				{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Declare"
+				  "text" : "Id_alias"
 				},
 				  	{
 				  "name" : "",
@@ -236,7 +236,7 @@ Blockly.Blocks['Declare/declare12'] = {
 				  	{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -293,7 +293,7 @@ Blockly.Blocks['Event/event2'] = {
 				{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Event"
+				  "text" : "Id"
 				},
 				  	{
 				  "name" : "Params",
@@ -322,7 +322,7 @@ Blockly.Blocks['Declare/declare15'] = {
 				{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -358,7 +358,7 @@ Blockly.Blocks['Declare/declare16'] = {
 				{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -428,7 +428,7 @@ Blockly.Blocks['When/when4'] = {
 				{
 				  "name" : "id_source",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_source"
 				},
 				  	{
 				  "name" : "",
@@ -451,7 +451,7 @@ Blockly.Blocks['When/when4'] = {
 				  	{
 				  "name" : "id_signal",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_signal"
 				},
 				  	{
 				  "name" : "Params",
@@ -602,7 +602,7 @@ Blockly.Blocks['Declare/declare6'] = {
 				  	{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -642,7 +642,7 @@ Blockly.Blocks['Call/call1'] = {
 				{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Call"
+				  "text" : "Id"
 				},
 				  	{
 				  "name" : "",
@@ -681,7 +681,7 @@ Blockly.Blocks['When/when3'] = {
 				{
 				  "name" : "id_source",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_source"
 				},
 				  	{
 				  "name" : "When_sub_formula",
@@ -691,7 +691,7 @@ Blockly.Blocks['When/when3'] = {
 				  	{
 				  "name" : "id_signal",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_signal"
 				},
 				  	{
 				  "name" : "Params",
@@ -767,12 +767,12 @@ Blockly.Blocks['When/when2'] = {
 				{
 				  "name" : "id_when",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_when"
 				},
 				  	{
 				  "name" : "id_source",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_source"
 				},
 				  	{
 				  "name" : "",
@@ -795,7 +795,7 @@ Blockly.Blocks['When/when2'] = {
 				  	{
 				  "name" : "id_signal",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_signal"
 				},
 				  	{
 				  "name" : "Params",
@@ -909,7 +909,7 @@ Blockly.Blocks['Declare/declare4'] = {
 				  	{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Declare"
+				  "text" : "Id_alias"
 				},
 				  	{
 				  "name" : "",
@@ -918,7 +918,7 @@ Blockly.Blocks['Declare/declare4'] = {
 				  	{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -949,12 +949,12 @@ Blockly.Blocks['When/when1'] = {
 				{
 				  "name" : "id_when",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_when"
 				},
 				  	{
 				  "name" : "id_source",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_source"
 				},
 				  	{
 				  "name" : "When_sub_formula",
@@ -964,7 +964,7 @@ Blockly.Blocks['When/when1'] = {
 				  	{
 				  "name" : "id_signal",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_signal"
 				},
 				  	{
 				  "name" : "Params",
@@ -1122,7 +1122,7 @@ Blockly.Blocks['Declare/declare13'] = {
 				{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -1167,12 +1167,12 @@ Blockly.Blocks['Func/func3'] = {
 				{
 				  "name" : "id_function",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_function"
 				},
 				  	{
 				  "name" : "id_source",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_source"
 				},
 				  	{
 				  "name" : "Params1",
@@ -1212,7 +1212,7 @@ Blockly.Blocks['Func/func2'] = {
 				{
 				  "name" : "id_source",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_source"
 				},
 				  	{
 				  "name" : "Params1",
@@ -1269,7 +1269,7 @@ Blockly.Blocks['Declare_sub_formula/dot_id'] = {
 				  	{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				
 			],
@@ -1351,12 +1351,12 @@ Blockly.Blocks['Func/func4'] = {
 				{
 				  "name" : "id_function",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_function"
 				},
 				  	{
 				  "name" : "id_source",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_source"
 				},
 				  	{
 				  "name" : "Params1",
@@ -1413,7 +1413,7 @@ Blockly.Blocks['When_sub_formula/When_sub_formula1'] = {
 				  	{
 				  "name" : "id_source",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_source"
 				},
 				
 			],
@@ -1439,7 +1439,7 @@ Blockly.Blocks['Ref/ref2'] = {
 				{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Ref"
+				  "text" : "Id"
 				},
 				  	{
 				  "name" : "",
@@ -1538,7 +1538,7 @@ Blockly.Blocks['Declare/declare11'] = {
 				{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Declare"
+				  "text" : "Id_alias"
 				},
 				  	{
 				  "name" : "",
@@ -1547,7 +1547,7 @@ Blockly.Blocks['Declare/declare11'] = {
 				  	{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -1651,7 +1651,7 @@ Blockly.Blocks['Declare/declare1'] = {
 				  	{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Declare"
+				  "text" : "Id_alias"
 				},
 				  	{
 				  "name" : "",
@@ -1660,7 +1660,7 @@ Blockly.Blocks['Declare/declare1'] = {
 				  	{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -1808,7 +1808,7 @@ Blockly.Blocks['Declare/declare2'] = {
 				  	{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Declare"
+				  "text" : "Id_alias"
 				},
 				  	{
 				  "name" : "",
@@ -1817,7 +1817,7 @@ Blockly.Blocks['Declare/declare2'] = {
 				  	{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -1943,7 +1943,7 @@ Blockly.Blocks['Declare/declare10'] = {
 				{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Declare"
+				  "text" : "Id_alias"
 				},
 				  	{
 				  "name" : "",
@@ -1952,7 +1952,7 @@ Blockly.Blocks['Declare/declare10'] = {
 				  	{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -1992,7 +1992,7 @@ Blockly.Blocks['Declare/declare14'] = {
 				{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -2062,7 +2062,7 @@ Blockly.Blocks['Ref/ref1'] = {
 				{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Ref"
+				  "text" : "Id"
 				},
 				
 			],
@@ -2088,7 +2088,7 @@ Blockly.Blocks['Func/func1'] = {
 				{
 				  "name" : "id_source",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_source"
 				},
 				  	{
 				  "name" : "Params1",
@@ -2120,7 +2120,6 @@ Blockly.Blocks['Func/func1'] = {
 
 Blockly.Blocks['Thing/thing1'] = {
 	init: function() {
-		this.setTooltip('Thing: \n Id { (declare | event | when ) }*');
 		this.jsonInit(
 			{
 			  "type" : "Thing/thing1",
@@ -2129,7 +2128,7 @@ Blockly.Blocks['Thing/thing1'] = {
 				{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Thing"
+				  "text" : "Id"
 				},
 				  	{
 				  "name" : "",
@@ -2164,12 +2163,12 @@ Blockly.Blocks['Event/event1'] = {
 				{
 				  "name" : "id_event",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_event"
 				},
 				  	{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Event"
+				  "text" : "Id"
 				},
 				  	{
 				  "name" : "Params",
@@ -2217,7 +2216,7 @@ Blockly.Blocks['Ref/ref3'] = {
 				{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Ref"
+				  "text" : "Id"
 				},
 				  	{
 				  "name" : "",
@@ -2301,7 +2300,7 @@ Blockly.Blocks['Declare/declare8'] = {
 				  	{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -2336,7 +2335,7 @@ Blockly.Blocks['When_sub_formula/When_sub_formula2'] = {
 				  	{
 				  "name" : "id_source",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_source"
 				},
 				  	{
 				  "name" : "",
@@ -2379,7 +2378,7 @@ Blockly.Blocks['Declare/declare3'] = {
 				  	{
 				  "name" : "lex",
 				  "type" : "field_input",
-				  "text" : "Declare"
+				  "text" : "id_alias"
 				},
 				  	{
 				  "name" : "",
@@ -2388,7 +2387,7 @@ Blockly.Blocks['Declare/declare3'] = {
 				  	{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
@@ -2450,7 +2449,7 @@ Blockly.Blocks['Id'] = {
 				{
 				  "name" : "Id",
 				  "type" : "field_input",
-				  "text" : "variable"
+				  "text" : "Identifier"
 				},
 				
 			],
@@ -2480,7 +2479,7 @@ Blockly.Blocks['Declare/declare5'] = {
 				  	{
 				  "name" : "id_item",
 				  "type" : "field_input",
-				  "text" : ""
+				  "text" : "id_item"
 				},
 				  	{
 				  "name" : "Declare_sub_formula",
