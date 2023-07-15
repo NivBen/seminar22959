@@ -81,32 +81,6 @@ Blockly.Blocks['Declare/declare7'] = {
 	}
 }
 
-Blockly.Blocks['Integer/natural'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Integer/natural",
-			  "message0" : "%1 ",
-			  "args0" : [
-				{
-				  "name" : "IntegerName",
-				  "type" : "field_number",
-				  "value" : 1
-				},
-				
-			],
-			  "colour" : 283,
-			  "output" : "Integer",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "Integer",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
 Blockly.Blocks['String/s'] = {
 	init: function() {
 		this.jsonInit(
@@ -126,7 +100,7 @@ Blockly.Blocks['String/s'] = {
 			  
 			  
 			  "inputsInline" : true,
-			  "tooltip" : "String",
+			  "tooltip" : "{String}",
 			  "helpUrl" : ""
 			}
 		);
@@ -877,9 +851,10 @@ Blockly.Blocks['ExprType1/string'] = {
 			  "message0" : "%1 ",
 			  "args0" : [
 				{
-				  "name" : "str",
-				  "type" : "input_value",
-				  "check" : ["String"]
+				  "name": "str",
+				  "type": "field_input",
+				  "text": "\" \"",
+				  "spellcheck": false
 				},
 				
 			],
@@ -888,7 +863,7 @@ Blockly.Blocks['ExprType1/string'] = {
 			  
 			  
 			  "inputsInline" : true,
-			  "tooltip" : "ExprType1:\n{string}",
+			  "tooltip" : "ExprType1:\n{String}",
 			  "helpUrl" : ""
 			}
 		);
@@ -2414,18 +2389,18 @@ Blockly.Blocks['Declare/declare3'] = {
 	}
 }
 
-Blockly.Blocks['ExprType1/integer'] = {
+Blockly.Blocks['ExprType1/number'] = {
 	init: function() {
 		this.jsonInit(
 			{
-			  "type" : "ExprType1/integer",
+			  "type" : "ExprType1/number",
 			  "message0" : "%1 ",
 			  "args0" : [
 				{
-				  "name" : "int",
-				  "type" : "input_value",
-				  "check" : ["Integer"]
-				},
+					"type": "field_number",
+					"name": "number",
+					"value": 23,
+				}
 				
 			],
 			  "colour" : 283,
@@ -2433,7 +2408,7 @@ Blockly.Blocks['ExprType1/integer'] = {
 			  
 			  
 			  "inputsInline" : true,
-			  "tooltip" : "ExprType1:\n{integer}",
+			  "tooltip" : "ExprType1:\n{Number}",
 			  "helpUrl" : ""
 			}
 		);
@@ -2716,7 +2691,7 @@ var toolbox = {
 					'type': 'ExprType1/string'
 				}, {
 					'kind': 'block',
-					'type': 'ExprType1/integer'
+					'type': 'ExprType1/number'
 				}
 			]
 		}, {
@@ -2759,16 +2734,6 @@ var toolbox = {
 				{
 					'kind': 'block',
 					'type': 'Id'
-				}
-			]
-		}, {
-			'kind': 'category',
-			'name': 'Integer',
-			'colour': '283',
-			'contents': [
-				{
-					'kind': 'block',
-					'type': 'Integer/natural'
 				}
 			]
 		}, {
@@ -2929,10 +2894,6 @@ langGen['Action/action5'] = function (block) {
 }
 
 langGen['Declare/declare7'] = function (block) {
-	return '';
-}
-
-langGen['Integer/natural'] = function (block) {
 	return '';
 }
 
@@ -3186,7 +3147,7 @@ langGen['Declare/declare3'] = function (block) {
 	return '';
 }
 
-langGen['ExprType1/integer'] = function (block) {
+langGen['ExprType1/number'] = function (block) {
 	return '';
 }
 

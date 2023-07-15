@@ -332,7 +332,7 @@
     <label text="(String | Number | <ref>) { &#34;.&#34; (<ref> |<call>) }* [&#34;->&#34; (<declare> |<params>)]"></label>
     <block type="Expr/exp1">
       <value name="ExprType1">
-        <shadow type="ExprType1/integer"></shadow>
+        <shadow type="ExprType1/number"></shadow>
       </value>
       <value name="ExprType2">
         <shadow type="ExprType2/call"></shadow>
@@ -340,7 +340,7 @@
     </block>
     <block type="Expr/exp2"> 
       <value name="ExprType1">
-        <shadow type="ExprType1/ref"></shadow>
+        <shadow type="ExprType1/string"></shadow>
       </value>
       <value name="ExprType2">
         <shadow type="ExprType2/ref"></shadow>
@@ -369,7 +369,7 @@
         <shadow type="String/s"></shadow>
       </value>
     </block>
-    <block type="ExprType1/integer"> 
+    <block type="ExprType1/number"> 
       <value name="int">
         <shadow type="Integer/natural"></shadow>
       </value>
@@ -596,10 +596,6 @@
         <shadow type="Declare/declare1"></shadow>
       </value>
     </block>
-  </category>
-
-  <category name="Integer" colour="275">
-    <block type="Integer/natural"> </block>
   </category>
 
   <category name="String" colour="300">
