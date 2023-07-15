@@ -3103,16 +3103,13 @@ langGen['Thing/thing1'] = function(block) {
 					if (typeof returnBlock[counter] !== 'undefined') {
 						returnString += returnBlock[counter] + '\n';
 					}
-					
 					return returnString;
 				} else {
 					return '';
 				}
 		}
-
-		result = getBlockValues(block)
-			
-		return result;
+	result = getBlockValues(block)
+	return result;
 }
 
 langGen['Event/event1'] = function (block) {
@@ -3220,7 +3217,7 @@ var debouncedT2BUpdate = debounce(textToBlockUpdate, 1000);
 editor.getModel().onDidChangeContent(debouncedT2BUpdate);
 
 
-
+// buttons - Start
 function toXml() {
 	var xml = Blockly.Xml.workspaceToDom(workspace);
 	var xml_text = Blockly.Xml.domToPrettyText(xml);
@@ -3249,7 +3246,7 @@ function copy_data(containerid) {
 	window.getSelection().removeAllRanges();
 	console.log("data copied");
 }
-
+// buttons - Finish
 
 // Modal - Start
   var modal = document.getElementById("XMLModal");
