@@ -11,20 +11,34 @@ Kogi uses [Google Blockly](https://developers.google.com/blockly) to create the 
 
 See *Syntax.rsc* for Formula definition and *generated-kogi-files/index.html* & *generated-kogi-files/blocks.js* for generated Blockly code by Kogi.
 
-#
+
 ___Step 2___: after generating Blockly BBE, we manually updated the generated files (see folder *modified-kogi-files*/**) to better fit our specific use case.
+#
+### *Versions backlog*
+#### Version 1:
+- Basic incomplete syntax
+- Ability to print XML DOM representation of blocks on the canvas
+- Mostly visual updates: labels, tooltips, reorganizing & re-coloring categories
+#### Version 2:
+- Complete Syntax
+- Ability to import XML from user unput
+- Generating formula code on execution pane from Blockly's Canvas in real time with [Monaco Editor](https://microsoft.github.io/monaco-editor/)
+    -  Using basic Blockly recursive print
+#### Version 3:
+- Creating a language generator for the given formula
+# 
 
 ### *Main changes*
 - Created Syntax.rsc Based on *BNF.png*
-- Added exporting XML text functionality and displaying it in a modal
-- Enabled importing XML text from a modal and converting it to blocks in the toolbox
 - Added Blockly GRID layout
 - Added Blockly zoom and focus buttons
 - Reorganized and re-colored block categories for better readability
 - Added labels under each block category in the toolbox 
 - Added tooltips for each block in the toolbox and canvas
 - Added hat symbol on Thing block to indicate starting block
-- Generating formula code on execution pane from Blockly's Canvas in real time using [Monaco Editor](https://microsoft.github.io/monaco-editor/)
+- Added exporting XML output functionality and displaying it in a modal
+- Enabled importing XML input from a modal and converting it to blocks in the toolbox
+- Generating formula code on execution pane from Blockly's Canvas in real time with [Monaco Editor](https://microsoft.github.io/monaco-editor/)
 #
 ## Incountered Issues and limitations
 

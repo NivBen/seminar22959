@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" value="notranslate">
+  
+  <script src="https://unpkg.com/blockly@9.2.1/blockly.min.js"></script>
+  <script src="https://unpkg.com/blockly@9.2.1/msg/en.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify-css.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify-html.js"></script>-->
+
+  <title>Seminar 22959</title>
+
+  <link
+    rel="stylesheet"
+    data-name="vs/editor/editor.main"
+    href="https://unpkg.com/monaco-editor/min/vs/editor/editor.main.css"
+  />
+
+  <style>
+    body {background-color: #fdfdfd; color: #333; font-family: Helvetica, Arial}
+    .bar {padding: 10px; margin: 10px; color: #333; background: #fafafa; border: 1px solid #ccc;} 
+    .error {color: #ba3939; background: #ffe0e0; border: 1px solid #a33a3a; opacity: 0; transition: opacity 0.5s ease;}
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 70; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    
+    .close {      /* The Close Button */
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Seminar 22959 Block Language</h1>
+  <div id="error_bar" class="bar error"></div>
+  <button onclick="toXml()" style="width: 12%;">Generate XML</button>
+  <button id="modal_btn" style="width: 25%;">Display latest generated XML</button>
+  <button onclick="fromXml()" style="width: 12%;">import from XML</button>
+  <button type="button" onclick="copy_data(monaco_container)" style="width: 49%;">Copy execution pane text</button>
+  <div style="width: 100%">
+    <div id="blockDiv" style="height: 600px; width: 49%; position: absolute; left: 8px;"></div>
+    <div id="monaco_container" style="height: 600px; width: 49%; position: absolute; left: 50%; border: 1px solid grey;"></div>
+  </div>
+
+  <script>var require = { paths: { vs: 'https://unpkg.com/monaco-editor/min/vs' } };</script>
+  <script src="https://unpkg.com/monaco-editor/min/vs/loader.js"></script>
+  <script src="https://unpkg.com/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
+  <script src="https://unpkg.com/monaco-editor/min/vs/editor/editor.main.js"></script>
+  <script>
+    var editor = monaco.editor.create(document.getElementById('monaco_container'), {
+      value: "Generated Block formula will be here...",
+      language: '',
+      lineNumbers: 'off',
+      theme: 'vs-dark'
+    });
+  </script>
+
+  <div id="XMLModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <code contenteditable="true" id="XML_paragraph" style="white-space: pre-wrap"></code>
+    </div>
+  </div>
+
+</body>
+
+<!--TOOLBOX-->
+<?xml version="1.0" encoding="UTF-8"?>
+<xml id="toolbox" style="display: none">
+  <category name="Thing" colour="000">
+    <label text="Id {(declare | event | when | func)}*"></label>
+    <block type="Thing/thing1">
+      <value name="things">
+        <shadow type="Thing_parameters/declare"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="Thing_parameters" colour="000">
+    <label text="{declare}"></label>
+    <block type="Thing_parameters/declare"> 
+      <value name="Declare">
+        <shadow type="Declare/declare1"></shadow>
+      </value>
+    </block>
+    <label text="{when}"></label>
+    <block type="Thing_parameters/when"> 
+      <value name="When">
+        <shadow type="When/when1"></shadow>
+      </value>
+    </block>
+    <label text="{event}"></label>
+    <block type="Thing_parameters/event"> 
+      <value name="Event">
+        <shadow type="Event/event1"></shadow>
+      </value>
+    </block>
+    <label text="{func}"></label>
+    <block type="Thing_parameters/func"> 
+      <value name="Func">
+        <shadow type="Func/func1"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="Event" colour="025">
+    <label text="[Id_event] Id {params}"></label>
+    <block type="Event/event1"> 
+      <value name="Params">
+        <shadow type="Params/params3"></shadow>
+      </value>
+    </block>
+    <block type="Event/event2"> 
+      <value name="Params">
+        <shadow type="Params/params4"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="When" colour="050">
+    <label text="[Id_when] {[ &#34;[&#34; {declare} &#34;]&#34; ]&#34;.&#34;}+ Id_signal {params} &#34;{&#34; {action}* &#34;}&#34;"></label>
+    <block type="When/when1"> 
+      <value name="When_sub_formula">
+        <shadow type="When_sub_formula/When_sub_formula1"></shadow>
+      </value>
+      <value name="Params">
+        <shadow type="Params/params3"></shadow>
+      </value>
+      <value name="Action">
+        <shadow type="Action/action1"></shadow>
+      </value>
+    </block>
+    <block type="When/when2"> 
+      <value name="Declare">
+        <shadow type="Declare/declare1"></shadow>
+      </value>
+      <value name="When_sub_formula">
+        <shadow type="When_sub_formula/When_sub_formula2"></shadow>
+      </value>
+      <value name="Params">
+        <shadow type="Params/params4"></shadow>
+      </value>
+      <value name="Action">
+        <shadow type="Action/action3"></shadow>
+      </value>
+    </block>
+    <block type="When/when3"> 
+      <value name="When_sub_formula">
+        <shadow type="When_sub_formula/When_sub_formula2"></shadow>
+      </value>
+      <value name="Params">
+        <shadow type="Params/params4"></shadow>
+      </value>
+      <value name="Action">
+        <shadow type="Action/action3"></shadow>
+      </value>
+    </block>
+    <block type="When/when4"> 
+      <value name="Declare">
+        <shadow type="Declare/declare5"></shadow>
+      </value>
+      <value name="When_sub_formula">
+        <shadow type="When_sub_formula/When_sub_formula1"></shadow>
+      </value>
+      <value name="Params">
+        <shadow type="Params/params2"></shadow>
+      </value>
+      <value name="Action">
+        <shadow type="Action/action8"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="When sub formula" colour="050">
+    <label text="{ Id [ &#34;[&#34; <declare> &#34;]&#34; ] &#34;.&#34;}&#34;"></label>
+    <block type="When_sub_formula/When_sub_formula1"> </block>
+    <block type="When_sub_formula/When_sub_formula2"> 
+      <value name="Declare">
+        <shadow type="Declare/declare8"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="Func" colour="075">
+    <label text="[id] Id <params> &#34;->&#34; <params> [ &#34;{&#34; <action>* &#34;}&#34; ]&#34;"></label>
+    <block type="Func/func1"> 
+      <value name="Params1">
+        <shadow type="Params/params2"></shadow>
+      </value>
+      <value name="Params2">
+        <shadow type="Params/params3"></shadow>
+      </value>
+    </block>
+    <block type="Func/func2"> 
+      <value name="Params1">
+        <shadow type="Params/params2"></shadow>
+      </value>
+      <value name="Params2">
+        <shadow type="Params/params3"></shadow>
+      </value>
+      <value name="Action">
+        <shadow type="Action/action7"></shadow>
+      </value>
+    </block>
+    <block type="Func/func3"> 
+      <value name="Params1">
+        <shadow type="Params/params1"></shadow>
+      </value>
+      <value name="Params2">
+        <shadow type="Params/params3"></shadow>
+      </value>
+    </block>
+    <block type="Func/func4"> 
+      <value name="Params1">
+        <shadow type="Params/params3"></shadow>
+      </value>
+      <value name="Params2">
+        <shadow type="Params/params2"></shadow>
+      </value>
+      <value name="Action">
+        <shadow type="Action/action2"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="Action" colour="100">
+    <label text="[&#34;*&#34;] <expr> [&#34;?&#34;] &#34;{&#34; <action>* &#34;}&#34; [ &#34;{&#34; <action>* &#34;}&#34; ]"></label>
+    <block type="Action/action1"> 
+      <value name="Expr">
+        <shadow type="Expr/exp1"></shadow>
+      </value>
+      <value name="action_true">
+        <shadow type="Action/action7"></shadow>
+      </value>
+    </block>
+    <block type="Action/action2"> 
+      <value name="Expr">
+        <shadow type="Expr/exp2"></shadow>
+      </value>
+      <value name="action_true">
+        <shadow type="Action/action7"></shadow>
+      </value>
+      <value name="action_false">
+        <shadow type="Action/action7"></shadow>
+      </value>
+    </block>
+    <block type="Action/action3"> 
+      <value name="Expr">
+        <shadow type="Expr/exp2"></shadow>
+      </value>
+      <value name="action_true">
+        <shadow type="Action/action7"></shadow>
+      </value>
+    </block>
+    <block type="Action/action4"> 
+      <value name="Expr">
+        <shadow type="Expr/exp2"></shadow>
+      </value>
+      <value name="action_true">
+        <shadow type="Action/action7"></shadow>
+      </value>
+      <value name="action_false">
+        <shadow type="Action/action7"></shadow>
+      </value>
+    </block>
+    <block type="Action/action5"> 
+      <value name="Expr">
+        <shadow type="Expr/exp1"></shadow>
+      </value>
+      <value name="action_true">
+        <shadow type="Action/action5"></shadow>
+      </value>
+    </block>
+    <block type="Action/action6"> 
+      <value name="Expr">
+        <shadow type="Expr/exp3"></shadow>
+      </value>
+      <value name="action_true">
+        <shadow type="Action/action2"></shadow>
+      </value>
+      <value name="action_false">
+        <shadow type="Action/action3"></shadow>
+      </value>
+    </block>
+    <block type="Action/action7"> 
+      <value name="Expr">
+        <shadow type="Expr/exp3"></shadow>
+      </value>
+      <value name="action_true">
+        <shadow type="Action/action2"></shadow>
+      </value>
+    </block>
+    <block type="Action/action8"> 
+      <value name="Expr">
+        <shadow type="Expr/exp3"></shadow>
+      </value>
+      <value name="action_true">
+        <shadow type="Action/action1"></shadow>
+      </value>
+      <value name="action_false">
+        <shadow type="Action/action2"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="Expr" colour="125">
+    <label text="(String | Number | <ref>) { &#34;.&#34; (<ref> |<call>) }* [&#34;->&#34; (<declare> |<params>)]"></label>
+    <block type="Expr/exp1">
+      <value name="ExprType1">
+        <shadow type="ExprType1/number"></shadow>
+      </value>
+      <value name="ExprType2">
+        <shadow type="ExprType2/call"></shadow>
+      </value>
+    </block>
+    <block type="Expr/exp2"> 
+      <value name="ExprType1">
+        <shadow type="ExprType1/string"></shadow>
+      </value>
+      <value name="ExprType2">
+        <shadow type="ExprType2/ref"></shadow>
+      </value>
+      <value name="Declare">
+        <shadow type="Declare/declare1"></shadow>
+      </value>
+    </block>
+    <block type="Expr/exp3"> 
+      <value name="ExprType1">
+        <shadow type="ExprType1/ref"></shadow>
+      </value>
+      <value name="ExprType2">
+        <shadow type="ExprType2/ref"></shadow>
+      </value>
+      <value name="Params">
+        <shadow type="Params/params1"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="ExprType1" colour="125">
+    <label text="(String | Number | <ref>)"></label>
+    <block type="ExprType1/string"> 
+      <value name="str">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="ExprType1/number"> 
+      <value name="int">
+        <shadow type="Integer/natural"></shadow>
+      </value>
+    </block>
+    <block type="ExprType1/ref"> 
+      <value name="Ref">
+        <shadow type="Ref/ref2"></shadow>
+      </value>
+    </block>
+  </category>
+  
+  <category name="ExprType2" colour="125">
+    <label text="(<ref> | <call>)"></label>
+    <block type="ExprType2/ref"> 
+      <value name="Ref">
+        <shadow type="Ref/ref3"></shadow>
+      </value>
+    </block>
+    <block type="ExprType2/call"> 
+      <value name="Call">
+        <shadow type="Call/call1"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="Call" colour="150">
+    <label text="(Id | func)  &#34;(&#34; {(<expr>| &#34;*&#34;) &#34;,&#34;}*  &#34;) &#34;"></label>
+    <block type="Call/call1"> 
+      <value name="Call_sub_formula">
+        <shadow type="Call_sub_formula/star"></shadow>
+      </value>
+    </block>
+    <block type="Call/call2">
+      <value name="Func">
+        <shadow type="Func/func1"></shadow>
+      </value> 
+      <value name="Call_sub_formula">
+        <shadow type="Call_sub_formula/star"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="Call_sub_formula" colour="150">
+    <label text="{ ( <expr> | &#34;*&#34; ) &#34;,&#34; }*"></label>
+    <block type="Call_sub_formula/star"> </block>
+    <block type="Call_sub_formula/expression">
+      <value name="Expr">
+        <shadow type="Expr/exp2"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="Ref" colour="175">
+    <label text="Id [&#34;[&#34; (<expr> | &#34;*&#34;) &#34;]&#34;]"></label>
+    <block type="Ref/ref1"> </block>
+    <block type="Ref/ref2"> 
+      <value name="Expr">
+        <shadow type="Expr/exp1"></shadow>
+      </value>
+    </block>
+    <block type="Ref/ref3"> </block>
+  </category>
+
+  <category name="Declare" colour="200">
+    <label text="[&#34;[]&#34;] [Id_alias &#34;:&#34;] {id_item}^+&#34;.&#34; [&#34;=&#34; string_initial] [string_import]"></label>
+    <block type="Declare/declare1"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+      <value name="initial">
+        <shadow type="String/s"></shadow>
+      </value>
+      <value name="import">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare2"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+      <value name="initial">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare3"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+      <value name="import">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare4"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare5"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+      <value name="initial">
+        <shadow type="String/s"></shadow>
+      </value>
+      <value name="import">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare6"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+      <value name="initial">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare7"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+      <value name="import">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare8"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+      <value name="import">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare9"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+      <value name="initial">
+        <shadow type="String/s"></shadow>
+      </value>
+      <value name="import">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare10"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+      <value name="initial">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare11"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+      <value name="import">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare12"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare13"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+      <value name="initial">
+        <shadow type="String/s"></shadow>
+      </value>
+      <value name="import">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare14"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+      <value name="initial">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare15"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+      <value name="import">
+        <shadow type="String/s"></shadow>
+      </value>
+    </block>
+    <block type="Declare/declare16"> 
+      <value name="Declare_sub_formula">
+        <shadow type="Declare_sub_formula/dot_id"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="Declare_sub_formula" colour="200">
+    <label text="{id_item}^+&#34;.&#34;"></label>
+    <block type="Declare_sub_formula/dot_id"> </block>
+  </category>
+
+  <category name="Params" colour="225">
+    <label text="&#34;(&#34; <declare>*&#34;,&#34; [&#34;...&#34;] &#34;)&#34;"></label>
+    <block type="Params/params1"> </block>
+    <block type="Params/params2"> </block>
+    <block type="Params/params3"> 
+      <value name="Params_sub_formula">
+        <shadow type="Params_sub_formula/declare_comma"></shadow>
+      </value>
+    </block>
+    <block type="Params/params4"> 
+      <value name="Params_sub_formula">
+        <shadow type="Params_sub_formula/declare_comma"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="Params_sub_formula" colour="250">
+    <label text="<declare>*&#34;,&#34;"></label>
+    <block type="Params_sub_formula/declare_comma"> 
+      <value name="Declare">
+        <shadow type="Declare/declare1"></shadow>
+      </value>
+    </block>
+  </category>
+
+  <category name="String" colour="300">
+    <block type="String/s"> </block>
+  </category>
+  
+</xml>
+
+<script src="blocks-modified[ver3].js"></script>
+</html>
