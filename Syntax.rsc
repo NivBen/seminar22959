@@ -17,16 +17,13 @@ extend lang::std::Id;
 
   // [Id] Id <Params>
   syntax Event
-  = event1: Id id_event Id Params
-  | event2: Id Params
+  = event1: Id id_event Params
   ;
 
-  // [id] { Id [ "[" <declare> "]" ] "."}^+ Id <Params> "{" <action>* "}"
+  // { Id [ "[" <declare> "]" ] "."}^+ Id <Params> "{" <action>* "}"
   syntax When
-  = when1: Id id_when Id id_source When_sub_formula* Id id_signal Params "{" Action* "}"
-  | when2: Id id_when Id id_source "[" Declare "]" When_sub_formula* Id id_signal Params "{" Action* "}"
-  | when3: Id id_source When_sub_formula* Id id_signal Params "{" Action* "}"
-  | when4: Id id_source "[" Declare "]" When_sub_formula* Id id_signal Params "{" Action* "}"
+  = when1: Id id_source When_sub_formula* Id id_signal Params "{" Action* "}"
+  | when2: Id id_source "[" Declare "]" When_sub_formula* Id id_signal Params "{" Action* "}"
   ;
 
   // { Id [ "[" <declare> "]" ] "."}
@@ -35,24 +32,18 @@ extend lang::std::Id;
   | When_sub_formula2: "." Id id_source "[" Declare "]"
   ;
 
-  // [id] Id <params> "->" <params> [ "{" <action>* "}" ]
+  // Id <params> "->" <params> [ "{" <action>* "}" ]
   syntax Func
-  = func1: Id id_source Params "-\>" Params
-  | func2: Id id_source Params "-\>" Params "{" Action* "}"
-  | func3: Id id_function Id id_source Params "-\>" Params
-  | func4: Id id_function Id id_source Params "-\>" Params "{" Action* "}"
+  = func1: Id id_function Params "-\>" Params
+  | func2: Id id_function Params "-\>" Params "{" Action* "}"
   ;
 
-  // ["*"] <expr> ["?"] "{" <action>* "}" [ "{" <action>* "}" ]
+  // ["*"] <expr> ["?" "{" <action>* "}" [ "{" <action>* "}" ]]
   syntax Action
   = action1: "*" Expr "?" "{" Action* action_true "}"
   | action2: "*" Expr "?" "{" Action* action_true "}" "{" Action* action_false "}"
   | action3: Expr "?" "{" Action* action_true "}"
   | action4: Expr "?" "{" Action* action_true "}" "{" Action* action_false "}"
-  | action5: "*" Expr "{" Action* action_true "}"
-  | action6: "*" Expr "{" Action* action_true "}" "{" Action* action_false "}"
-  | action7: Expr "{" Action* action_true "}"
-  | action8: Expr "{" Action* action_true "}" "{" Action* action_false "}"
   ;
 
   // (String | Number | <ref>) { "." (<ref> |<call>) }* ["->" ((<declare> |<params>))]
@@ -75,10 +66,9 @@ extend lang::std::Id;
   | call: "." Call
   ;
 
-  // (Id | func) "(" {(<expr>|"*")","}* ")"
+  // Id "(" {(<expr>|"*")","}* ")"
   syntax Call
   = call1: Id "(" Call_sub_formula* ")"
-  | call2: Func "(" Call_sub_formula* ")"
   ;
 
   // {(<expr>|"*")","}*
@@ -119,17 +109,15 @@ extend lang::std::Id;
   = dot_id: "." Id id_item
   ;
 
-  // "(" <declare>*"," ["..."] ")"
+  // "(" <declare>^+"," ["..."] ")"
   syntax Params
-  = params1: "(...)"
-  | params2: "()"
-  | params3: "(" Params_sub_formula* "...)"
-  | params4: "(" Params_sub_formula* ")"
+  = params1: "(" Declare Params_sub_formula* "...)"
+  | params2: "(" Declare Params_sub_formula* ")"
   ;
 
   //<declare>*","
   syntax Params_sub_formula
-  = declare_comma: Declare ","
+  = declare_comma: "," Declare 
   ;
 
   lexical Integer = natural: [0-9]+;

@@ -1,40 +1,27 @@
-Blockly.Blocks['Action/action5'] = {
+Blockly.Blocks['Params_sub_formula/declare_comma'] = {
 	init: function() {
 		this.jsonInit(
 			{
-			  "type" : "Action/action5",
-			  "message0" : "* %1 %2 { %3 %4 } %5 ",
+			  "type" : "Params_sub_formula/declare_comma",
+			  "message0" : ", %1 %2 ",
 			  "args0" : [
 				{
 				  "name" : "",
 				  "type" : "input_dummy"
 				},
 				  	{
-				  "name" : "Expr",
+				  "name" : "Declare",
 				  "type" : "input_value",
-				  "check" : ["Expr"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "action_true",
-				  "type" : "input_statement",
-				  "check" : ["Action", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
+				  "check" : ["Declare"]
 				},
 				
 			],
-			  "colour" : 10,
+			  "colour" : 108,
 			  
-			  "previousStatement" : "Action",
-			  "nextStatement" : "Action",
+			  "previousStatement" : "Params_sub_formula",
+			  "nextStatement" : "Params_sub_formula",
 			  "inputsInline" : true,
-			  "tooltip" : "action5",
+			  "tooltip" : "declare_comma",
 			  "helpUrl" : ""
 			}
 		);
@@ -69,12 +56,113 @@ Blockly.Blocks['Declare/declare7'] = {
 				},
 				
 			],
-			  "colour" : 261,
+			  "colour" : 224,
 			  "output" : "Declare",
 			  
 			  
 			  "inputsInline" : true,
 			  "tooltip" : "declare7",
+			  "helpUrl" : ""
+			}
+		);
+	}
+}
+
+Blockly.Blocks['Thing_parameters/func'] = {
+	init: function() {
+		this.jsonInit(
+			{
+			  "type" : "Thing_parameters/func",
+			  "message0" : "%1 ",
+			  "args0" : [
+				{
+				  "name" : "Func",
+				  "type" : "input_value",
+				  "check" : ["Func"]
+				},
+				
+			],
+			  "colour" : 244,
+			  
+			  "previousStatement" : "Thing_parameters",
+			  "nextStatement" : "Thing_parameters",
+			  "inputsInline" : true,
+			  "tooltip" : "func",
+			  "helpUrl" : ""
+			}
+		);
+	}
+}
+
+Blockly.Blocks['Declare/declare13'] = {
+	init: function() {
+		this.jsonInit(
+			{
+			  "type" : "Declare/declare13",
+			  "message0" : "%1 %2 = %3 %4 %5 ",
+			  "args0" : [
+				{
+				  "name" : "id_item",
+				  "type" : "field_input",
+				  "text" : ""
+				},
+				  	{
+				  "name" : "stmt",
+				  "type" : "input_statement",
+				  "check" : ["Declare_sub_formula", "epsilon"]
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				  	{
+				  "name" : "initial",
+				  "type" : "input_value",
+				  "check" : ["String"]
+				},
+				  	{
+				  "name" : "import",
+				  "type" : "input_value",
+				  "check" : ["String"]
+				},
+				
+			],
+			  "colour" : 122,
+			  "output" : "Declare",
+			  
+			  
+			  "inputsInline" : true,
+			  "tooltip" : "declare13",
+			  "helpUrl" : ""
+			}
+		);
+	}
+}
+
+Blockly.Blocks['When_sub_formula/When_sub_formula1'] = {
+	init: function() {
+		this.jsonInit(
+			{
+			  "type" : "When_sub_formula/When_sub_formula1",
+			  "message0" : ". %1 %2 ",
+			  "args0" : [
+				{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				  	{
+				  "name" : "id_source",
+				  "type" : "field_input",
+				  "text" : ""
+				},
+				
+			],
+			  "colour" : 14,
+			  
+			  "previousStatement" : "When_sub_formula",
+			  "nextStatement" : "When_sub_formula",
+			  "inputsInline" : true,
+			  "tooltip" : "When_sub_formula1",
 			  "helpUrl" : ""
 			}
 		);
@@ -95,7 +183,7 @@ Blockly.Blocks['Integer/natural'] = {
 				},
 				
 			],
-			  "colour" : 283,
+			  "colour" : 125,
 			  "output" : "Integer",
 			  
 			  
@@ -121,7 +209,7 @@ Blockly.Blocks['String/s'] = {
 				},
 				
 			],
-			  "colour" : 311,
+			  "colour" : 171,
 			  "output" : "String",
 			  
 			  
@@ -175,42 +263,12 @@ Blockly.Blocks['Declare/declare9'] = {
 				},
 				
 			],
-			  "colour" : 175,
+			  "colour" : 244,
 			  "output" : "Declare",
 			  
 			  
 			  "inputsInline" : true,
 			  "tooltip" : "declare9",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Params_sub_formula/declare_comma'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Params_sub_formula/declare_comma",
-			  "message0" : "%1 , %2 ",
-			  "args0" : [
-				{
-				  "name" : "Declare",
-				  "type" : "input_value",
-				  "check" : ["Declare"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 36,
-			  
-			  "previousStatement" : "Params_sub_formula",
-			  "nextStatement" : "Params_sub_formula",
-			  "inputsInline" : true,
-			  "tooltip" : "declare_comma",
 			  "helpUrl" : ""
 			}
 		);
@@ -245,7 +303,7 @@ Blockly.Blocks['Declare/declare12'] = {
 				},
 				
 			],
-			  "colour" : 70,
+			  "colour" : 244,
 			  "output" : "Declare",
 			  
 			  
@@ -271,7 +329,7 @@ Blockly.Blocks['ExprType1/ref'] = {
 				},
 				
 			],
-			  "colour" : 101,
+			  "colour" : 317,
 			  "output" : "ExprType1",
 			  
 			  
@@ -283,17 +341,17 @@ Blockly.Blocks['ExprType1/ref'] = {
 	}
 }
 
-Blockly.Blocks['Event/event2'] = {
+Blockly.Blocks['Event/event1'] = {
 	init: function() {
 		this.jsonInit(
 			{
-			  "type" : "Event/event2",
+			  "type" : "Event/event1",
 			  "message0" : "%1 %2 ",
 			  "args0" : [
 				{
-				  "name" : "lex",
+				  "name" : "id_event",
 				  "type" : "field_input",
-				  "text" : "Event"
+				  "text" : ""
 				},
 				  	{
 				  "name" : "Params",
@@ -302,12 +360,12 @@ Blockly.Blocks['Event/event2'] = {
 				},
 				
 			],
-			  "colour" : 185,
+			  "colour" : 54,
 			  "output" : "Event",
 			  
 			  
 			  "inputsInline" : true,
-			  "tooltip" : "event2",
+			  "tooltip" : "event1",
 			  "helpUrl" : ""
 			}
 		);
@@ -338,7 +396,7 @@ Blockly.Blocks['Declare/declare15'] = {
 				},
 				
 			],
-			  "colour" : 233,
+			  "colour" : 64,
 			  "output" : "Declare",
 			  
 			  
@@ -369,7 +427,7 @@ Blockly.Blocks['Declare/declare16'] = {
 				},
 				
 			],
-			  "colour" : 263,
+			  "colour" : 167,
 			  "output" : "Declare",
 			  
 			  
@@ -409,7 +467,7 @@ Blockly.Blocks['Expr/exp2'] = {
 				},
 				
 			],
-			  "colour" : 4,
+			  "colour" : 89,
 			  "output" : "Expr",
 			  
 			  
@@ -421,11 +479,197 @@ Blockly.Blocks['Expr/exp2'] = {
 	}
 }
 
-Blockly.Blocks['When/when4'] = {
+Blockly.Blocks['Expr/exp1'] = {
 	init: function() {
 		this.jsonInit(
 			{
-			  "type" : "When/when4",
+			  "type" : "Expr/exp1",
+			  "message0" : "%1 %2 ",
+			  "args0" : [
+				{
+				  "name" : "ExprType1",
+				  "type" : "input_value",
+				  "check" : ["ExprType1"]
+				},
+				  	{
+				  "name" : "stmt",
+				  "type" : "input_statement",
+				  "check" : ["ExprType2", "epsilon"]
+				},
+				
+			],
+			  "colour" : 39,
+			  "output" : "Expr",
+			  
+			  
+			  "inputsInline" : true,
+			  "tooltip" : "exp1",
+			  "helpUrl" : ""
+			}
+		);
+	}
+}
+
+Blockly.Blocks['Call_sub_formula/star'] = {
+	init: function() {
+		this.jsonInit(
+			{
+			  "type" : "Call_sub_formula/star",
+			  "message0" : "* %1 , %2 ",
+			  "args0" : [
+				{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				
+			],
+			  "colour" : 349,
+			  
+			  "previousStatement" : "Call_sub_formula",
+			  "nextStatement" : "Call_sub_formula",
+			  "inputsInline" : true,
+			  "tooltip" : "star",
+			  "helpUrl" : ""
+			}
+		);
+	}
+}
+
+Blockly.Blocks['Action/action3'] = {
+	init: function() {
+		this.jsonInit(
+			{
+			  "type" : "Action/action3",
+			  "message0" : "%1 ? %2 { %3 %4 } %5 ",
+			  "args0" : [
+				{
+				  "name" : "Expr",
+				  "type" : "input_value",
+				  "check" : ["Expr"]
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				  	{
+				  "name" : "action_true",
+				  "type" : "input_statement",
+				  "check" : ["Action", "epsilon"]
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				
+			],
+			  "colour" : 186,
+			  
+			  "previousStatement" : "Action",
+			  "nextStatement" : "Action",
+			  "inputsInline" : true,
+			  "tooltip" : "action3",
+			  "helpUrl" : ""
+			}
+		);
+	}
+}
+
+Blockly.Blocks['Declare/declare6'] = {
+	init: function() {
+		this.jsonInit(
+			{
+			  "type" : "Declare/declare6",
+			  "message0" : "[] %1 %2 %3 = %4 %5 ",
+			  "args0" : [
+				{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				  	{
+				  "name" : "id_item",
+				  "type" : "field_input",
+				  "text" : ""
+				},
+				  	{
+				  "name" : "stmt",
+				  "type" : "input_statement",
+				  "check" : ["Declare_sub_formula", "epsilon"]
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				  	{
+				  "name" : "initial",
+				  "type" : "input_value",
+				  "check" : ["String"]
+				},
+				
+			],
+			  "colour" : 160,
+			  "output" : "Declare",
+			  
+			  
+			  "inputsInline" : true,
+			  "tooltip" : "declare6",
+			  "helpUrl" : ""
+			}
+		);
+	}
+}
+
+Blockly.Blocks['Call/call1'] = {
+	init: function() {
+		this.jsonInit(
+			{
+			  "type" : "Call/call1",
+			  "message0" : "%1 ( %2 %3 ) %4 ",
+			  "args0" : [
+				{
+				  "name" : "lex",
+				  "type" : "field_input",
+				  "text" : "Call"
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				  	{
+				  "name" : "stmt",
+				  "type" : "input_statement",
+				  "check" : ["Call_sub_formula", "epsilon"]
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				
+			],
+			  "colour" : 337,
+			  "output" : "Call",
+			  
+			  
+			  "inputsInline" : true,
+			  "tooltip" : "call1",
+			  "helpUrl" : ""
+			}
+		);
+	}
+}
+
+Blockly.Blocks['When/when2'] = {
+	init: function() {
+		this.jsonInit(
+			{
+			  "type" : "When/when2",
 			  "message0" : "%1 [ %2 %3 ] %4 %5 %6 %7 { %8 %9 } %10 ",
 			  "args0" : [
 				{
@@ -476,353 +720,7 @@ Blockly.Blocks['When/when4'] = {
 				},
 				
 			],
-			  "colour" : 53,
-			  "output" : "When",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "when4",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Expr/exp1'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Expr/exp1",
-			  "message0" : "%1 %2 ",
-			  "args0" : [
-				{
-				  "name" : "ExprType1",
-				  "type" : "input_value",
-				  "check" : ["ExprType1"]
-				},
-				  	{
-				  "name" : "stmt",
-				  "type" : "input_statement",
-				  "check" : ["ExprType2", "epsilon"]
-				},
-				
-			],
-			  "colour" : 300,
-			  "output" : "Expr",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "exp1",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Call_sub_formula/star'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Call_sub_formula/star",
-			  "message0" : "* %1 , %2 ",
-			  "args0" : [
-				{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 39,
-			  
-			  "previousStatement" : "Call_sub_formula",
-			  "nextStatement" : "Call_sub_formula",
-			  "inputsInline" : true,
-			  "tooltip" : "star",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Action/action3'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Action/action3",
-			  "message0" : "%1 ? %2 { %3 %4 } %5 ",
-			  "args0" : [
-				{
-				  "name" : "Expr",
-				  "type" : "input_value",
-				  "check" : ["Expr"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "action_true",
-				  "type" : "input_statement",
-				  "check" : ["Action", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 313,
-			  
-			  "previousStatement" : "Action",
-			  "nextStatement" : "Action",
-			  "inputsInline" : true,
-			  "tooltip" : "action3",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Declare/declare6'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Declare/declare6",
-			  "message0" : "[] %1 %2 %3 = %4 %5 ",
-			  "args0" : [
-				{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "id_item",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "stmt",
-				  "type" : "input_statement",
-				  "check" : ["Declare_sub_formula", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "initial",
-				  "type" : "input_value",
-				  "check" : ["String"]
-				},
-				
-			],
-			  "colour" : 238,
-			  "output" : "Declare",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "declare6",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Call/call1'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Call/call1",
-			  "message0" : "%1 ( %2 %3 ) %4 ",
-			  "args0" : [
-				{
-				  "name" : "lex",
-				  "type" : "field_input",
-				  "text" : "Call"
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "stmt",
-				  "type" : "input_statement",
-				  "check" : ["Call_sub_formula", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 172,
-			  "output" : "Call",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "call1",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['When/when3'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "When/when3",
-			  "message0" : "%1 %2 %3 %4 { %5 %6 } %7 ",
-			  "args0" : [
-				{
-				  "name" : "id_source",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "stmt",
-				  "type" : "input_statement",
-				  "check" : ["When_sub_formula", "epsilon"]
-				},
-				  	{
-				  "name" : "id_signal",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "Params",
-				  "type" : "input_value",
-				  "check" : ["Params"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "stmt",
-				  "type" : "input_statement",
-				  "check" : ["Action", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 234,
-			  "output" : "When",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "when3",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Params/params4'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Params/params4",
-			  "message0" : "( %1 %2 ) %3 ",
-			  "args0" : [
-				{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "stmt",
-				  "type" : "input_statement",
-				  "check" : ["Params_sub_formula", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 232,
-			  "output" : "Params",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "params4",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['When/when2'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "When/when2",
-			  "message0" : "%1 %2 [ %3 %4 ] %5 %6 %7 %8 { %9 %10 } %11 ",
-			  "args0" : [
-				{
-				  "name" : "id_when",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "id_source",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "Declare",
-				  "type" : "input_value",
-				  "check" : ["Declare"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "stmt",
-				  "type" : "input_statement",
-				  "check" : ["When_sub_formula", "epsilon"]
-				},
-				  	{
-				  "name" : "id_signal",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "Params",
-				  "type" : "input_value",
-				  "check" : ["Params"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "stmt",
-				  "type" : "input_statement",
-				  "check" : ["Action", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 143,
+			  "colour" : 82,
 			  "output" : "When",
 			  
 			  
@@ -862,7 +760,7 @@ Blockly.Blocks['Expr/exp3'] = {
 				},
 				
 			],
-			  "colour" : 157,
+			  "colour" : 226,
 			  "output" : "Expr",
 			  
 			  
@@ -888,7 +786,7 @@ Blockly.Blocks['ExprType1/string'] = {
 				},
 				
 			],
-			  "colour" : 136,
+			  "colour" : 100,
 			  "output" : "ExprType1",
 			  
 			  
@@ -932,7 +830,7 @@ Blockly.Blocks['Declare/declare4'] = {
 				},
 				
 			],
-			  "colour" : 69,
+			  "colour" : 230,
 			  "output" : "Declare",
 			  
 			  
@@ -949,14 +847,9 @@ Blockly.Blocks['When/when1'] = {
 		this.jsonInit(
 			{
 			  "type" : "When/when1",
-			  "message0" : "%1 %2 %3 %4 %5 { %6 %7 } %8 ",
+			  "message0" : "%1 %2 %3 %4 { %5 %6 } %7 ",
 			  "args0" : [
 				{
-				  "name" : "id_when",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
 				  "name" : "id_source",
 				  "type" : "field_input",
 				  "text" : ""
@@ -991,7 +884,7 @@ Blockly.Blocks['When/when1'] = {
 				},
 				
 			],
-			  "colour" : 333,
+			  "colour" : 209,
 			  "output" : "When",
 			  
 			  
@@ -1021,239 +914,12 @@ Blockly.Blocks['ExprType2/ref'] = {
 				},
 				
 			],
-			  "colour" : 326,
+			  "colour" : 29,
 			  
 			  "previousStatement" : "ExprType2",
 			  "nextStatement" : "ExprType2",
 			  "inputsInline" : true,
 			  "tooltip" : "ref",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Thing_parameters/func'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Thing_parameters/func",
-			  "message0" : "%1 ",
-			  "args0" : [
-				{
-				  "name" : "Func",
-				  "type" : "input_value",
-				  "check" : ["Func"]
-				},
-				
-			],
-			  "colour" : 159,
-			  
-			  "previousStatement" : "Thing_parameters",
-			  "nextStatement" : "Thing_parameters",
-			  "inputsInline" : true,
-			  "tooltip" : "func",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Action/action7'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Action/action7",
-			  "message0" : "%1 { %2 %3 } %4 ",
-			  "args0" : [
-				{
-				  "name" : "Expr",
-				  "type" : "input_value",
-				  "check" : ["Expr"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "action_true",
-				  "type" : "input_statement",
-				  "check" : ["Action", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 115,
-			  
-			  "previousStatement" : "Action",
-			  "nextStatement" : "Action",
-			  "inputsInline" : true,
-			  "tooltip" : "action7",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Params/params1'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Params/params1",
-			  "message0" : "(...)",
-			  
-			  "colour" : 143,
-			  "output" : "Params",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "params1",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Declare/declare13'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Declare/declare13",
-			  "message0" : "%1 %2 = %3 %4 %5 ",
-			  "args0" : [
-				{
-				  "name" : "id_item",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "stmt",
-				  "type" : "input_statement",
-				  "check" : ["Declare_sub_formula", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "initial",
-				  "type" : "input_value",
-				  "check" : ["String"]
-				},
-				  	{
-				  "name" : "import",
-				  "type" : "input_value",
-				  "check" : ["String"]
-				},
-				
-			],
-			  "colour" : 72,
-			  "output" : "Declare",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "declare13",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Func/func3'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Func/func3",
-			  "message0" : "%1 %2 %3 -> %4 %5 ",
-			  "args0" : [
-				{
-				  "name" : "id_function",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "id_source",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "Params",
-				  "type" : "input_value",
-				  "check" : ["Params"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "Params",
-				  "type" : "input_value",
-				  "check" : ["Params"]
-				},
-				
-			],
-			  "colour" : 193,
-			  "output" : "Func",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "func3",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Func/func2'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Func/func2",
-			  "message0" : "%1 %2 -> %3 %4 { %5 %6 } %7 ",
-			  "args0" : [
-				{
-				  "name" : "id_source",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "Params",
-				  "type" : "input_value",
-				  "check" : ["Params"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "Params",
-				  "type" : "input_value",
-				  "check" : ["Params"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "stmt",
-				  "type" : "input_statement",
-				  "check" : ["Action", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 103,
-			  "output" : "Func",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "func2",
 			  "helpUrl" : ""
 			}
 		);
@@ -1278,12 +944,65 @@ Blockly.Blocks['Declare_sub_formula/dot_id'] = {
 				},
 				
 			],
-			  "colour" : 35,
+			  "colour" : 241,
 			  
 			  "previousStatement" : "Declare_sub_formula",
 			  "nextStatement" : "Declare_sub_formula",
 			  "inputsInline" : true,
 			  "tooltip" : "dot_id",
+			  "helpUrl" : ""
+			}
+		);
+	}
+}
+
+Blockly.Blocks['Func/func2'] = {
+	init: function() {
+		this.jsonInit(
+			{
+			  "type" : "Func/func2",
+			  "message0" : "%1 %2 -> %3 %4 { %5 %6 } %7 ",
+			  "args0" : [
+				{
+				  "name" : "id_function",
+				  "type" : "field_input",
+				  "text" : ""
+				},
+				  	{
+				  "name" : "Params",
+				  "type" : "input_value",
+				  "check" : ["Params"]
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				  	{
+				  "name" : "Params",
+				  "type" : "input_value",
+				  "check" : ["Params"]
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				  	{
+				  "name" : "stmt",
+				  "type" : "input_statement",
+				  "check" : ["Action", "epsilon"]
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				
+			],
+			  "colour" : 40,
+			  "output" : "Func",
+			  
+			  
+			  "inputsInline" : true,
+			  "tooltip" : "func2",
 			  "helpUrl" : ""
 			}
 		);
@@ -1334,100 +1053,12 @@ Blockly.Blocks['Action/action4'] = {
 				},
 				
 			],
-			  "colour" : 99,
+			  "colour" : 207,
 			  
 			  "previousStatement" : "Action",
 			  "nextStatement" : "Action",
 			  "inputsInline" : true,
 			  "tooltip" : "action4",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Func/func3'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Func/func3",
-			  "message0" : "%1 %2 %3 -> %4 %5 { %6 %7 } %8 ",
-			  "args0" : [
-				{
-				  "name" : "id_function",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "id_source",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "Params",
-				  "type" : "input_value",
-				  "check" : ["Params"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "Params",
-				  "type" : "input_value",
-				  "check" : ["Params"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "stmt",
-				  "type" : "input_statement",
-				  "check" : ["Action", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 270,
-			  "output" : "Func",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "func3",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['When_sub_formula/When_sub_formula1'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "When_sub_formula/When_sub_formula1",
-			  "message0" : ". %1 %2 ",
-			  "args0" : [
-				{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "id_source",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				
-			],
-			  "colour" : 63,
-			  
-			  "previousStatement" : "When_sub_formula",
-			  "nextStatement" : "When_sub_formula",
-			  "inputsInline" : true,
-			  "tooltip" : "When_sub_formula1",
 			  "helpUrl" : ""
 			}
 		);
@@ -1461,7 +1092,7 @@ Blockly.Blocks['Ref/ref2'] = {
 				},
 				
 			],
-			  "colour" : 326,
+			  "colour" : 295,
 			  "output" : "Ref",
 			  
 			  
@@ -1521,12 +1152,51 @@ Blockly.Blocks['Action/action2'] = {
 				},
 				
 			],
-			  "colour" : 291,
+			  "colour" : 259,
 			  
 			  "previousStatement" : "Action",
 			  "nextStatement" : "Action",
 			  "inputsInline" : true,
 			  "tooltip" : "action2",
+			  "helpUrl" : ""
+			}
+		);
+	}
+}
+
+Blockly.Blocks['Params/params2'] = {
+	init: function() {
+		this.jsonInit(
+			{
+			  "type" : "Params/params2",
+			  "message0" : "( %1 %2 %3 ) %4 ",
+			  "args0" : [
+				{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				  	{
+				  "name" : "Declare",
+				  "type" : "input_value",
+				  "check" : ["Declare"]
+				},
+				  	{
+				  "name" : "stmt",
+				  "type" : "input_statement",
+				  "check" : ["Params_sub_formula", "epsilon"]
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				
+			],
+			  "colour" : 109,
+			  "output" : "Params",
+			  
+			  
+			  "inputsInline" : true,
+			  "tooltip" : "params2",
 			  "helpUrl" : ""
 			}
 		);
@@ -1566,51 +1236,12 @@ Blockly.Blocks['Declare/declare11'] = {
 				},
 				
 			],
-			  "colour" : 38,
+			  "colour" : 20,
 			  "output" : "Declare",
 			  
 			  
 			  "inputsInline" : true,
 			  "tooltip" : "declare11",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Call/call2'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Call/call2",
-			  "message0" : "%1 ( %2 %3 ) %4 ",
-			  "args0" : [
-				{
-				  "name" : "Func",
-				  "type" : "input_value",
-				  "check" : ["Func"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "stmt",
-				  "type" : "input_statement",
-				  "check" : ["Call_sub_formula", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 100,
-			  "output" : "Call",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "call2",
 			  "helpUrl" : ""
 			}
 		);
@@ -1631,7 +1262,7 @@ Blockly.Blocks['Thing_parameters/event'] = {
 				},
 				
 			],
-			  "colour" : 263,
+			  "colour" : 319,
 			  
 			  "previousStatement" : "Thing_parameters",
 			  "nextStatement" : "Thing_parameters",
@@ -1689,7 +1320,7 @@ Blockly.Blocks['Declare/declare1'] = {
 				},
 				
 			],
-			  "colour" : 15,
+			  "colour" : 83,
 			  "output" : "Declare",
 			  
 			  
@@ -1736,64 +1367,12 @@ Blockly.Blocks['Action/action1'] = {
 				},
 				
 			],
-			  "colour" : 133,
+			  "colour" : 53,
 			  
 			  "previousStatement" : "Action",
 			  "nextStatement" : "Action",
 			  "inputsInline" : true,
 			  "tooltip" : "action1",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Action/action8'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Action/action8",
-			  "message0" : "%1 { %2 %3 } %4 { %5 %6 } %7 ",
-			  "args0" : [
-				{
-				  "name" : "Expr",
-				  "type" : "input_value",
-				  "check" : ["Expr"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "action_true",
-				  "type" : "input_statement",
-				  "check" : ["Action", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "action_false",
-				  "type" : "input_statement",
-				  "check" : ["Action", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 151,
-			  
-			  "previousStatement" : "Action",
-			  "nextStatement" : "Action",
-			  "inputsInline" : true,
-			  "tooltip" : "action8",
 			  "helpUrl" : ""
 			}
 		);
@@ -1841,68 +1420,12 @@ Blockly.Blocks['Declare/declare2'] = {
 				},
 				
 			],
-			  "colour" : 24,
+			  "colour" : 308,
 			  "output" : "Declare",
 			  
 			  
 			  "inputsInline" : true,
 			  "tooltip" : "declare2",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Action/action6'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Action/action6",
-			  "message0" : "* %1 %2 { %3 %4 } %5 { %6 %7 } %8 ",
-			  "args0" : [
-				{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "Expr",
-				  "type" : "input_value",
-				  "check" : ["Expr"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "action_true",
-				  "type" : "input_statement",
-				  "check" : ["Action", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "action_false",
-				  "type" : "input_statement",
-				  "check" : ["Action", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 42,
-			  
-			  "previousStatement" : "Action",
-			  "nextStatement" : "Action",
-			  "inputsInline" : true,
-			  "tooltip" : "action6",
 			  "helpUrl" : ""
 			}
 		);
@@ -1927,12 +1450,91 @@ Blockly.Blocks['Call_sub_formula/expression'] = {
 				},
 				
 			],
-			  "colour" : 315,
+			  "colour" : 288,
 			  
 			  "previousStatement" : "Call_sub_formula",
 			  "nextStatement" : "Call_sub_formula",
 			  "inputsInline" : true,
 			  "tooltip" : "expression",
+			  "helpUrl" : ""
+			}
+		);
+	}
+}
+
+Blockly.Blocks['Params/params1'] = {
+	init: function() {
+		this.jsonInit(
+			{
+			  "type" : "Params/params1",
+			  "message0" : "( %1 %2 %3 ...) %4 ",
+			  "args0" : [
+				{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				  	{
+				  "name" : "Declare",
+				  "type" : "input_value",
+				  "check" : ["Declare"]
+				},
+				  	{
+				  "name" : "stmt",
+				  "type" : "input_statement",
+				  "check" : ["Params_sub_formula", "epsilon"]
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				
+			],
+			  "colour" : 117,
+			  "output" : "Params",
+			  
+			  
+			  "inputsInline" : true,
+			  "tooltip" : "params1",
+			  "helpUrl" : ""
+			}
+		);
+	}
+}
+
+Blockly.Blocks['Func/func1'] = {
+	init: function() {
+		this.jsonInit(
+			{
+			  "type" : "Func/func1",
+			  "message0" : "%1 %2 -> %3 %4 ",
+			  "args0" : [
+				{
+				  "name" : "id_function",
+				  "type" : "field_input",
+				  "text" : ""
+				},
+				  	{
+				  "name" : "Params",
+				  "type" : "input_value",
+				  "check" : ["Params"]
+				},
+				  	{
+				  "name" : "",
+				  "type" : "input_dummy"
+				},
+				  	{
+				  "name" : "Params",
+				  "type" : "input_value",
+				  "check" : ["Params"]
+				},
+				
+			],
+			  "colour" : 31,
+			  "output" : "Func",
+			  
+			  
+			  "inputsInline" : true,
+			  "tooltip" : "func1",
 			  "helpUrl" : ""
 			}
 		);
@@ -1976,7 +1578,7 @@ Blockly.Blocks['Declare/declare10'] = {
 				},
 				
 			],
-			  "colour" : 328,
+			  "colour" : 359,
 			  "output" : "Declare",
 			  
 			  
@@ -2016,7 +1618,7 @@ Blockly.Blocks['Declare/declare14'] = {
 				},
 				
 			],
-			  "colour" : 242,
+			  "colour" : 323,
 			  "output" : "Declare",
 			  
 			  
@@ -2046,7 +1648,7 @@ Blockly.Blocks['ExprType2/call'] = {
 				},
 				
 			],
-			  "colour" : 354,
+			  "colour" : 329,
 			  
 			  "previousStatement" : "ExprType2",
 			  "nextStatement" : "ExprType2",
@@ -2072,52 +1674,12 @@ Blockly.Blocks['Ref/ref1'] = {
 				},
 				
 			],
-			  "colour" : 271,
+			  "colour" : 359,
 			  "output" : "Ref",
 			  
 			  
 			  "inputsInline" : true,
 			  "tooltip" : "ref1",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Func/func1'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Func/func1",
-			  "message0" : "%1 %2 -> %3 %4 ",
-			  "args0" : [
-				{
-				  "name" : "id_source",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "Params",
-				  "type" : "input_value",
-				  "check" : ["Params"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "Params",
-				  "type" : "input_value",
-				  "check" : ["Params"]
-				},
-				
-			],
-			  "colour" : 233,
-			  "output" : "Func",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "func1",
 			  "helpUrl" : ""
 			}
 		);
@@ -2163,61 +1725,6 @@ Blockly.Blocks['Thing/thing1'] = {
 	}
 }
 
-Blockly.Blocks['Event/event1'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Event/event1",
-			  "message0" : "%1 %2 %3 ",
-			  "args0" : [
-				{
-				  "name" : "id_event",
-				  "type" : "field_input",
-				  "text" : ""
-				},
-				  	{
-				  "name" : "lex",
-				  "type" : "field_input",
-				  "text" : "Event"
-				},
-				  	{
-				  "name" : "Params",
-				  "type" : "input_value",
-				  "check" : ["Params"]
-				},
-				
-			],
-			  "colour" : 157,
-			  "output" : "Event",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "event1",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Params/params2'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Params/params2",
-			  "message0" : "()",
-			  
-			  "colour" : 206,
-			  "output" : "Params",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "params2",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
 Blockly.Blocks['Ref/ref3'] = {
 	init: function() {
 		this.jsonInit(
@@ -2236,7 +1743,7 @@ Blockly.Blocks['Ref/ref3'] = {
 				},
 				
 			],
-			  "colour" : 63,
+			  "colour" : 11,
 			  "output" : "Ref",
 			  
 			  
@@ -2262,7 +1769,7 @@ Blockly.Blocks['Thing_parameters/when'] = {
 				},
 				
 			],
-			  "colour" : 305,
+			  "colour" : 82,
 			  
 			  "previousStatement" : "Thing_parameters",
 			  "nextStatement" : "Thing_parameters",
@@ -2288,7 +1795,7 @@ Blockly.Blocks['Thing_parameters/declare'] = {
 				},
 				
 			],
-			  "colour" : 321,
+			  "colour" : 300,
 			  
 			  "previousStatement" : "Thing_parameters",
 			  "nextStatement" : "Thing_parameters",
@@ -2323,7 +1830,7 @@ Blockly.Blocks['Declare/declare8'] = {
 				},
 				
 			],
-			  "colour" : 333,
+			  "colour" : 245,
 			  "output" : "Declare",
 			  
 			  
@@ -2366,7 +1873,7 @@ Blockly.Blocks['When_sub_formula/When_sub_formula2'] = {
 				},
 				
 			],
-			  "colour" : 167,
+			  "colour" : 300,
 			  
 			  "previousStatement" : "When_sub_formula",
 			  "nextStatement" : "When_sub_formula",
@@ -2415,7 +1922,7 @@ Blockly.Blocks['Declare/declare3'] = {
 				},
 				
 			],
-			  "colour" : 132,
+			  "colour" : 159,
 			  "output" : "Declare",
 			  
 			  
@@ -2441,7 +1948,7 @@ Blockly.Blocks['ExprType1/integer'] = {
 				},
 				
 			],
-			  "colour" : 283,
+			  "colour" : 307,
 			  "output" : "ExprType1",
 			  
 			  
@@ -2467,7 +1974,7 @@ Blockly.Blocks['Id'] = {
 				},
 				
 			],
-			  "colour" : 65,
+			  "colour" : 327,
 			  "output" : "Id",
 			  
 			  
@@ -2516,46 +2023,12 @@ Blockly.Blocks['Declare/declare5'] = {
 				},
 				
 			],
-			  "colour" : 219,
+			  "colour" : 30,
 			  "output" : "Declare",
 			  
 			  
 			  "inputsInline" : true,
 			  "tooltip" : "declare5",
-			  "helpUrl" : ""
-			}
-		);
-	}
-}
-
-Blockly.Blocks['Params/params3'] = {
-	init: function() {
-		this.jsonInit(
-			{
-			  "type" : "Params/params3",
-			  "message0" : "( %1 %2 ...) %3 ",
-			  "args0" : [
-				{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				  	{
-				  "name" : "stmt",
-				  "type" : "input_statement",
-				  "check" : ["Params_sub_formula", "epsilon"]
-				},
-				  	{
-				  "name" : "",
-				  "type" : "input_dummy"
-				},
-				
-			],
-			  "colour" : 144,
-			  "output" : "Params",
-			  
-			  
-			  "inputsInline" : true,
-			  "tooltip" : "params3",
 			  "helpUrl" : ""
 			}
 		);
@@ -2568,17 +2041,11 @@ var toolbox = {
 		{
 			'kind': 'category',
 			'name': 'Action',
-			'colour': '144',
+			'colour': '176',
 			'contents': [
 				{
 					'kind': 'block',
-					'type': 'Action/action5'
-				}, {
-					'kind': 'block',
 					'type': 'Action/action3'
-				}, {
-					'kind': 'block',
-					'type': 'Action/action7'
 				}, {
 					'kind': 'block',
 					'type': 'Action/action4'
@@ -2588,31 +2055,12 @@ var toolbox = {
 				}, {
 					'kind': 'block',
 					'type': 'Action/action1'
-				}, {
-					'kind': 'block',
-					'type': 'Action/action8'
-				}, {
-					'kind': 'block',
-					'type': 'Action/action6'
-				}
-			]
-		}, {
-			'kind': 'category',
-			'name': 'Call',
-			'colour': '136',
-			'contents': [
-				{
-					'kind': 'block',
-					'type': 'Call/call1'
-				}, {
-					'kind': 'block',
-					'type': 'Call/call2'
 				}
 			]
 		}, {
 			'kind': 'category',
 			'name': 'Call_sub_formula',
-			'colour': '177',
+			'colour': '318',
 			'contents': [
 				{
 					'kind': 'block',
@@ -2624,8 +2072,18 @@ var toolbox = {
 			]
 		}, {
 			'kind': 'category',
+			'name': 'Call',
+			'colour': '337',
+			'contents': [
+				{
+					'kind': 'block',
+					'type': 'Call/call1'
+				}
+			]
+		}, {
+			'kind': 'category',
 			'name': 'Declare_sub_formula',
-			'colour': '35',
+			'colour': '241',
 			'contents': [
 				{
 					'kind': 'block',
@@ -2635,11 +2093,14 @@ var toolbox = {
 		}, {
 			'kind': 'category',
 			'name': 'Declare',
-			'colour': '169',
+			'colour': '186',
 			'contents': [
 				{
 					'kind': 'block',
 					'type': 'Declare/declare7'
+				}, {
+					'kind': 'block',
+					'type': 'Declare/declare13'
 				}, {
 					'kind': 'block',
 					'type': 'Declare/declare9'
@@ -2658,9 +2119,6 @@ var toolbox = {
 				}, {
 					'kind': 'block',
 					'type': 'Declare/declare4'
-				}, {
-					'kind': 'block',
-					'type': 'Declare/declare13'
 				}, {
 					'kind': 'block',
 					'type': 'Declare/declare11'
@@ -2689,21 +2147,8 @@ var toolbox = {
 			]
 		}, {
 			'kind': 'category',
-			'name': 'ExprType2',
-			'colour': '340',
-			'contents': [
-				{
-					'kind': 'block',
-					'type': 'ExprType2/ref'
-				}, {
-					'kind': 'block',
-					'type': 'ExprType2/call'
-				}
-			]
-		}, {
-			'kind': 'category',
 			'name': 'Expr',
-			'colour': '153',
+			'colour': '118',
 			'contents': [
 				{
 					'kind': 'block',
@@ -2719,7 +2164,7 @@ var toolbox = {
 		}, {
 			'kind': 'category',
 			'name': 'ExprType1',
-			'colour': '173',
+			'colour': '241',
 			'contents': [
 				{
 					'kind': 'block',
@@ -2735,30 +2180,34 @@ var toolbox = {
 		}, {
 			'kind': 'category',
 			'name': 'Event',
-			'colour': '171',
+			'colour': '54',
 			'contents': [
 				{
-					'kind': 'block',
-					'type': 'Event/event2'
-				}, {
 					'kind': 'block',
 					'type': 'Event/event1'
 				}
 			]
 		}, {
 			'kind': 'category',
-			'name': 'Func',
-			'colour': '199',
+			'name': 'ExprType2',
+			'colour': '179',
 			'contents': [
 				{
 					'kind': 'block',
-					'type': 'Func/func3'
+					'type': 'ExprType2/ref'
 				}, {
+					'kind': 'block',
+					'type': 'ExprType2/call'
+				}
+			]
+		}, {
+			'kind': 'category',
+			'name': 'Func',
+			'colour': '35',
+			'contents': [
+				{
 					'kind': 'block',
 					'type': 'Func/func2'
-				}, {
-					'kind': 'block',
-					'type': 'Func/func3'
 				}, {
 					'kind': 'block',
 					'type': 'Func/func1'
@@ -2767,7 +2216,7 @@ var toolbox = {
 		}, {
 			'kind': 'category',
 			'name': 'Id',
-			'colour': '65',
+			'colour': '327',
 			'contents': [
 				{
 					'kind': 'block',
@@ -2777,7 +2226,7 @@ var toolbox = {
 		}, {
 			'kind': 'category',
 			'name': 'Integer',
-			'colour': '283',
+			'colour': '125',
 			'contents': [
 				{
 					'kind': 'block',
@@ -2787,26 +2236,20 @@ var toolbox = {
 		}, {
 			'kind': 'category',
 			'name': 'Params',
-			'colour': '181',
+			'colour': '113',
 			'contents': [
 				{
-					'kind': 'block',
-					'type': 'Params/params4'
-				}, {
-					'kind': 'block',
-					'type': 'Params/params1'
-				}, {
 					'kind': 'block',
 					'type': 'Params/params2'
 				}, {
 					'kind': 'block',
-					'type': 'Params/params3'
+					'type': 'Params/params1'
 				}
 			]
 		}, {
 			'kind': 'category',
 			'name': 'Params_sub_formula',
-			'colour': '36',
+			'colour': '108',
 			'contents': [
 				{
 					'kind': 'block',
@@ -2816,7 +2259,7 @@ var toolbox = {
 		}, {
 			'kind': 'category',
 			'name': 'Ref',
-			'colour': '220',
+			'colour': '221',
 			'contents': [
 				{
 					'kind': 'block',
@@ -2832,7 +2275,7 @@ var toolbox = {
 		}, {
 			'kind': 'category',
 			'name': 'String',
-			'colour': '311',
+			'colour': '171',
 			'contents': [
 				{
 					'kind': 'block',
@@ -2852,7 +2295,7 @@ var toolbox = {
 		}, {
 			'kind': 'category',
 			'name': 'Thing_parameters',
-			'colour': '262',
+			'colour': '236',
 			'contents': [
 				{
 					'kind': 'block',
@@ -2871,15 +2314,9 @@ var toolbox = {
 		}, {
 			'kind': 'category',
 			'name': 'When',
-			'colour': '190',
+			'colour': '145',
 			'contents': [
 				{
-					'kind': 'block',
-					'type': 'When/when4'
-				}, {
-					'kind': 'block',
-					'type': 'When/when3'
-				}, {
 					'kind': 'block',
 					'type': 'When/when2'
 				}, {
@@ -2890,7 +2327,7 @@ var toolbox = {
 		}, {
 			'kind': 'category',
 			'name': 'When_sub_formula',
-			'colour': '115',
+			'colour': '157',
 			'contents': [
 				{
 					'kind': 'block',
@@ -2916,11 +2353,23 @@ const langGen = new Blockly.Generator('LangGen');
 
 workspace.addChangeListener(Blockly.Events.disableOrphans);
 
-langGen['Action/action5'] = function (block) {
+langGen['Params_sub_formula/declare_comma'] = function (block) {
 	return '';
 }
 
 langGen['Declare/declare7'] = function (block) {
+	return '';
+}
+
+langGen['Thing_parameters/func'] = function (block) {
+	return '';
+}
+
+langGen['Declare/declare13'] = function (block) {
+	return '';
+}
+
+langGen['When_sub_formula/When_sub_formula1'] = function (block) {
 	return '';
 }
 
@@ -2936,10 +2385,6 @@ langGen['Declare/declare9'] = function (block) {
 	return '';
 }
 
-langGen['Params_sub_formula/declare_comma'] = function (block) {
-	return '';
-}
-
 langGen['Declare/declare12'] = function (block) {
 	return '';
 }
@@ -2948,7 +2393,7 @@ langGen['ExprType1/ref'] = function (block) {
 	return '';
 }
 
-langGen['Event/event2'] = function (block) {
+langGen['Event/event1'] = function (block) {
 	return '';
 }
 
@@ -2961,10 +2406,6 @@ langGen['Declare/declare16'] = function (block) {
 }
 
 langGen['Expr/exp2'] = function (block) {
-	return '';
-}
-
-langGen['When/when4'] = function (block) {
 	return '';
 }
 
@@ -2985,14 +2426,6 @@ langGen['Declare/declare6'] = function (block) {
 }
 
 langGen['Call/call1'] = function (block) {
-	return '';
-}
-
-langGen['When/when3'] = function (block) {
-	return '';
-}
-
-langGen['Params/params4'] = function (block) {
 	return '';
 }
 
@@ -3020,23 +2453,7 @@ langGen['ExprType2/ref'] = function (block) {
 	return '';
 }
 
-langGen['Thing_parameters/func'] = function (block) {
-	return '';
-}
-
-langGen['Action/action7'] = function (block) {
-	return '';
-}
-
-langGen['Params/params1'] = function (block) {
-	return '';
-}
-
-langGen['Declare/declare13'] = function (block) {
-	return '';
-}
-
-langGen['Func/func3'] = function (block) {
+langGen['Declare_sub_formula/dot_id'] = function (block) {
 	return '';
 }
 
@@ -3044,19 +2461,7 @@ langGen['Func/func2'] = function (block) {
 	return '';
 }
 
-langGen['Declare_sub_formula/dot_id'] = function (block) {
-	return '';
-}
-
 langGen['Action/action4'] = function (block) {
-	return '';
-}
-
-langGen['Func/func3'] = function (block) {
-	return '';
-}
-
-langGen['When_sub_formula/When_sub_formula1'] = function (block) {
 	return '';
 }
 
@@ -3068,11 +2473,11 @@ langGen['Action/action2'] = function (block) {
 	return '';
 }
 
-langGen['Declare/declare11'] = function (block) {
+langGen['Params/params2'] = function (block) {
 	return '';
 }
 
-langGen['Call/call2'] = function (block) {
+langGen['Declare/declare11'] = function (block) {
 	return '';
 }
 
@@ -3088,19 +2493,19 @@ langGen['Action/action1'] = function (block) {
 	return '';
 }
 
-langGen['Action/action8'] = function (block) {
-	return '';
-}
-
 langGen['Declare/declare2'] = function (block) {
 	return '';
 }
 
-langGen['Action/action6'] = function (block) {
+langGen['Call_sub_formula/expression'] = function (block) {
 	return '';
 }
 
-langGen['Call_sub_formula/expression'] = function (block) {
+langGen['Params/params1'] = function (block) {
+	return '';
+}
+
+langGen['Func/func1'] = function (block) {
 	return '';
 }
 
@@ -3117,10 +2522,6 @@ langGen['ExprType2/call'] = function (block) {
 }
 
 langGen['Ref/ref1'] = function (block) {
-	return '';
-}
-
-langGen['Func/func1'] = function (block) {
 	return '';
 }
 
@@ -3144,14 +2545,6 @@ langGen['Thing/thing1'] = function(block) {
 		result = getBlockValues(block)
 			
 		return result;
-}
-
-langGen['Event/event1'] = function (block) {
-	return '';
-}
-
-langGen['Params/params2'] = function (block) {
-	return '';
 }
 
 langGen['Ref/ref3'] = function (block) {
@@ -3187,10 +2580,6 @@ langGen['Id'] = function (block) {
 }
 
 langGen['Declare/declare5'] = function (block) {
-	return '';
-}
-
-langGen['Params/params3'] = function (block) {
 	return '';
 }
 

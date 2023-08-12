@@ -131,58 +131,28 @@
   </category>
 
   <category name="Event" colour="025">
-    <label text="[Id_event] Id {params}"></label>
+    <label text="Id_event {params}"></label>
     <block type="Event/event1"> 
       <value name="Params">
-        <shadow type="Params/params3"></shadow>
-      </value>
-    </block>
-    <block type="Event/event2"> 
-      <value name="Params">
-        <shadow type="Params/params4"></shadow>
+        <shadow type="Params/params1"></shadow>
       </value>
     </block>
   </category>
 
   <category name="When" colour="050">
-    <label text="[Id_when] {[ &#34;[&#34; {declare} &#34;]&#34; ]&#34;.&#34;}+ Id_signal {params} &#34;{&#34; {action}* &#34;}&#34;"></label>
+    <label text="{Id_when [ &#34;[&#34; {declare} &#34;]&#34; ]&#34;.&#34;}+ Id_signal {params} &#34;{&#34; {action}* &#34;}&#34;"></label>
     <block type="When/when1"> 
       <value name="When_sub_formula">
-        <shadow type="When_sub_formula/When_sub_formula1"></shadow>
+        <shadow type="When_sub_formula/When_sub_formula2"></shadow>
       </value>
       <value name="Params">
-        <shadow type="Params/params3"></shadow>
+        <shadow type="Params/params2"></shadow>
       </value>
       <value name="Action">
-        <shadow type="Action/action1"></shadow>
+        <shadow type="Action/action3"></shadow>
       </value>
     </block>
     <block type="When/when2"> 
-      <value name="Declare">
-        <shadow type="Declare/declare1"></shadow>
-      </value>
-      <value name="When_sub_formula">
-        <shadow type="When_sub_formula/When_sub_formula2"></shadow>
-      </value>
-      <value name="Params">
-        <shadow type="Params/params4"></shadow>
-      </value>
-      <value name="Action">
-        <shadow type="Action/action3"></shadow>
-      </value>
-    </block>
-    <block type="When/when3"> 
-      <value name="When_sub_formula">
-        <shadow type="When_sub_formula/When_sub_formula2"></shadow>
-      </value>
-      <value name="Params">
-        <shadow type="Params/params4"></shadow>
-      </value>
-      <value name="Action">
-        <shadow type="Action/action3"></shadow>
-      </value>
-    </block>
-    <block type="When/when4"> 
       <value name="Declare">
         <shadow type="Declare/declare5"></shadow>
       </value>
@@ -193,7 +163,7 @@
         <shadow type="Params/params2"></shadow>
       </value>
       <value name="Action">
-        <shadow type="Action/action8"></shadow>
+        <shadow type="Action/action1"></shadow>
       </value>
     </block>
   </category>
@@ -209,13 +179,13 @@
   </category>
 
   <category name="Func" colour="075">
-    <label text="[id] Id <params> &#34;->&#34; <params> [ &#34;{&#34; <action>* &#34;}&#34; ]&#34;"></label>
+    <label text="Id <params> &#34;->&#34; <params> [ &#34;{&#34; <action>* &#34;}&#34; ]&#34;"></label>
     <block type="Func/func1"> 
       <value name="Params1">
         <shadow type="Params/params2"></shadow>
       </value>
       <value name="Params2">
-        <shadow type="Params/params3"></shadow>
+        <shadow type="Params/params1"></shadow>
       </value>
     </block>
     <block type="Func/func2"> 
@@ -223,41 +193,22 @@
         <shadow type="Params/params2"></shadow>
       </value>
       <value name="Params2">
-        <shadow type="Params/params3"></shadow>
-      </value>
-      <value name="Action">
-        <shadow type="Action/action7"></shadow>
-      </value>
-    </block>
-    <block type="Func/func3"> 
-      <value name="Params1">
         <shadow type="Params/params1"></shadow>
       </value>
-      <value name="Params2">
-        <shadow type="Params/params3"></shadow>
-      </value>
-    </block>
-    <block type="Func/func4"> 
-      <value name="Params1">
-        <shadow type="Params/params3"></shadow>
-      </value>
-      <value name="Params2">
-        <shadow type="Params/params2"></shadow>
-      </value>
       <value name="Action">
-        <shadow type="Action/action2"></shadow>
+        <shadow type="Action/action4"></shadow>
       </value>
     </block>
   </category>
 
   <category name="Action" colour="100">
-    <label text="[&#34;*&#34;] <expr> [&#34;?&#34;] &#34;{&#34; <action>* &#34;}&#34; [ &#34;{&#34; <action>* &#34;}&#34; ]"></label>
+    <label text="[&#34;*&#34;] <expr> [&#34;?&#34; &#34;{&#34; <action>* &#34;}&#34; [ &#34;{&#34; <action>* &#34;}&#34; ]]"></label>
     <block type="Action/action1"> 
       <value name="Expr">
         <shadow type="Expr/exp1"></shadow>
       </value>
       <value name="action_true">
-        <shadow type="Action/action7"></shadow>
+        <shadow type="Action/action3"></shadow>
       </value>
     </block>
     <block type="Action/action2"> 
@@ -265,10 +216,10 @@
         <shadow type="Expr/exp2"></shadow>
       </value>
       <value name="action_true">
-        <shadow type="Action/action7"></shadow>
+        <shadow type="Action/action4"></shadow>
       </value>
       <value name="action_false">
-        <shadow type="Action/action7"></shadow>
+        <shadow type="Action/action2"></shadow>
       </value>
     </block>
     <block type="Action/action3"> 
@@ -276,7 +227,7 @@
         <shadow type="Expr/exp2"></shadow>
       </value>
       <value name="action_true">
-        <shadow type="Action/action7"></shadow>
+        <shadow type="Action/action1"></shadow>
       </value>
     </block>
     <block type="Action/action4"> 
@@ -284,48 +235,10 @@
         <shadow type="Expr/exp2"></shadow>
       </value>
       <value name="action_true">
-        <shadow type="Action/action7"></shadow>
-      </value>
-      <value name="action_false">
-        <shadow type="Action/action7"></shadow>
-      </value>
-    </block>
-    <block type="Action/action5"> 
-      <value name="Expr">
-        <shadow type="Expr/exp1"></shadow>
-      </value>
-      <value name="action_true">
-        <shadow type="Action/action5"></shadow>
-      </value>
-    </block>
-    <block type="Action/action6"> 
-      <value name="Expr">
-        <shadow type="Expr/exp3"></shadow>
-      </value>
-      <value name="action_true">
-        <shadow type="Action/action2"></shadow>
-      </value>
-      <value name="action_false">
-        <shadow type="Action/action3"></shadow>
-      </value>
-    </block>
-    <block type="Action/action7"> 
-      <value name="Expr">
-        <shadow type="Expr/exp3"></shadow>
-      </value>
-      <value name="action_true">
-        <shadow type="Action/action2"></shadow>
-      </value>
-    </block>
-    <block type="Action/action8"> 
-      <value name="Expr">
-        <shadow type="Expr/exp3"></shadow>
-      </value>
-      <value name="action_true">
         <shadow type="Action/action1"></shadow>
       </value>
       <value name="action_false">
-        <shadow type="Action/action2"></shadow>
+        <shadow type="Action/action4"></shadow>
       </value>
     </block>
   </category>
@@ -398,16 +311,8 @@
   </category>
 
   <category name="Call" colour="150">
-    <label text="(Id | func)  &#34;(&#34; {(<expr>| &#34;*&#34;) &#34;,&#34;}*  &#34;) &#34;"></label>
+    <label text="Id &#34;(&#34; {(<expr>| &#34;*&#34;) &#34;,&#34;}*  &#34;) &#34;"></label>
     <block type="Call/call1"> 
-      <value name="Call_sub_formula">
-        <shadow type="Call_sub_formula/star"></shadow>
-      </value>
-    </block>
-    <block type="Call/call2">
-      <value name="Func">
-        <shadow type="Func/func1"></shadow>
-      </value> 
       <value name="Call_sub_formula">
         <shadow type="Call_sub_formula/star"></shadow>
       </value>
@@ -576,15 +481,13 @@
   </category>
 
   <category name="Params" colour="225">
-    <label text="&#34;(&#34; <declare>*&#34;,&#34; [&#34;...&#34;] &#34;)&#34;"></label>
-    <block type="Params/params1"> </block>
-    <block type="Params/params2"> </block>
-    <block type="Params/params3"> 
+    <label text="&#34;(&#34; <declare>+&#34;,&#34; [&#34;...&#34;] &#34;)&#34;"></label>
+    <block type="Params/params1"> 
       <value name="Params_sub_formula">
         <shadow type="Params_sub_formula/declare_comma"></shadow>
       </value>
     </block>
-    <block type="Params/params4"> 
+    <block type="Params/params2"> 
       <value name="Params_sub_formula">
         <shadow type="Params_sub_formula/declare_comma"></shadow>
       </value>
