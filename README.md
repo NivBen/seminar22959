@@ -1,10 +1,12 @@
 # Research Seminar: **Topics in Software Engineering**
+## Summary:
+Given a context-free grammar, we're tasked with creating an intuitive Block based environment (BBE) for it using various tools. 
 
-## Research Seminar: **Topics in Software Engineering**
-__Step 0__: We're given a context-free grammar specification in BNF metasyntax notation:
+The following steps show the chronological order of our work:
+
+___Step 0___: We're given a context-free grammar specification in BNF metasyntax notation:
 ![alt text](BNF.jpg)
 
-#
 ___Step 1___: We use [Kogi](https://zenodo.org/record/4033220) to derive block-based environments (BBE) from a given BNF notation.
 
 Kogi uses [Google Blockly](https://developers.google.com/blockly) to create the UI and [Rascal](https://www.rascal-mpl.org/) for the definition of grammars.
@@ -41,7 +43,6 @@ ___Step 2___: after generating Blockly BBE, we manually updated the generated fi
 - Generating formula code on execution pane from Blockly's Canvas in real time with [Monaco Editor](https://microsoft.github.io/monaco-editor/)
 #
 ## Incountered Issues and limitations
-
 - Difficulty using Kogi because of a lack of documentation, got instucrions from contacting the project developer
     - Was not able to run Kogi simplification
 - [Kogi](https://github.com/cwi-swat/kogi) master branch doesn't work, only other branches appears to successfully generate Blockly code. 
@@ -68,3 +69,4 @@ createBlocklyApp(#Thing, targetPath=|project://kogi/src/kogi/seminar/generated-k
 ```
 - Kogi generated files *index.html & blocks.js* are under *generated-kogi-files/**
 - Our modified Kogi files are under *modified-kogi-files/**
+#
